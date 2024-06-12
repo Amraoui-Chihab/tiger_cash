@@ -1,11 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ggggg/controler/apidata.dart';
-import 'package:ggggg/model/message.dart';
-import 'package:ggggg/model/user.dart';
-import 'package:ggggg/utl/colors.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+
+import '../controler/apidata.dart';
+import '../model/message.dart';
+import '../model/user.dart';
+import '../utl/colors.dart';
 
 class GroupChatPage extends StatefulWidget {
   const GroupChatPage({super.key});
@@ -125,6 +126,35 @@ class ChatScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleMedium,
                 softWrap: true,
               ),
+              // Column(
+              //   crossAxisAlignment: CrossAxisAlignment.end,
+              //   mainAxisSize: MainAxisSize.min,
+              //   children: [
+              //     Text(
+              //       message.timestamp.toString().substring(7, 14),
+              //       style: Theme.of(context).textTheme.bodySmall,
+              //     ),
+              //   ],
+              // ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.start,
+              //   crossAxisAlignment: CrossAxisAlignment.start,
+              //   mainAxisSize: MainAxisSize.min,
+              //   children: [
+
+              //     Column(
+              //       children: [
+              //         SizedBox(
+              //           height: 20,
+              //         ),
+              //         Text(
+              //           message.timestamp.toString().substring(7, 14),
+              //           style: Theme.of(context).textTheme.bodySmall,
+              //         ),
+              //       ],
+              //     ),
+              //   ],
+              // ),
             ],
           ),
         ),
@@ -146,12 +176,24 @@ class ChatScreen extends StatelessWidget {
               maxLines: 5,
               decoration: const InputDecoration(
                 hintText: 'اكتب رسالتك...',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(50)),
+                ),
               ),
             ),
           ),
-          IconButton(
-            icon: const Icon(Icons.send),
+          const SizedBox(
+            width: 5,
+          ),
+          IconButton.filled(
+            style: ButtonStyle(
+              backgroundColor: WidgetStateProperty.all(Ccolors.secndry),
+            ),
+            color: Ccolors.primry,
+            icon: const Icon(
+              Icons.send_outlined,
+              size: 30,
+            ),
             onPressed: () {
               if (messageController.text.trim().isNotEmpty) {
                 // إرسال الرسالة إلى Firebase
@@ -168,6 +210,9 @@ class ChatScreen extends StatelessWidget {
               }
             },
           ),
+          const SizedBox(
+            width: 5,
+          )
         ],
       ),
     );
@@ -203,7 +248,7 @@ class ChatController extends GetxController {
     db
         .collection('messages')
         .orderBy('timestamp', descending: true)
-        .limit(10)
+        .limit(15)
         .snapshots()
         .listen((snapshot) {
       messages.value = snapshot.docs

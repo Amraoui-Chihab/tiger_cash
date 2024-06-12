@@ -1,8 +1,9 @@
 import 'dart:convert';
 
 import 'package:get/get.dart';
-import 'package:ggggg/controler/apidata.dart';
-import 'package:ggggg/model/user.dart';
+
+import '../model/user.dart';
+import 'apidata.dart';
 
 class Profile extends GetxController {
   User user = User();

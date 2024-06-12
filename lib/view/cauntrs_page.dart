@@ -3,12 +3,13 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
-import 'package:ggggg/controler/apidata.dart';
-import 'package:ggggg/controler/home_controller.dart';
-import 'package:ggggg/error/server_error.dart';
-import 'package:ggggg/model/counter.dart';
-import 'package:ggggg/view/widget/my_text.dart';
 import 'package:http/http.dart' as http;
+
+import '../controler/apidata.dart';
+import '../controler/home_controller.dart';
+import '../error/server_error.dart';
+import '../model/counter.dart';
+import 'widget/my_text.dart';
 
 class CauntrsPage extends StatelessWidget {
   CauntrsPage({super.key});
@@ -18,7 +19,7 @@ class CauntrsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('متجدر العدادات'),
+          title: const Text('متجر العدادات'),
         ),
         body: Column(children: [
           ListTile(
@@ -34,7 +35,7 @@ class CauntrsPage extends StatelessWidget {
             child: GetBuilder<CounterController>(
               init: CounterController(),
               initState: (_) {},
-              builder: (_h) {
+              builder: (h) {
                 return FutureBuilder(
                     future: _.getdataForomApi(),
                     builder: (context, snabshot) {
@@ -55,11 +56,20 @@ class CauntrsPage extends StatelessWidget {
                                       Radius.circular(15)),
                                 ),
                                 child: ListTile(
-                                  title: Text(snabshot.data![index].name),
+                                  title: Text(
+                                    snabshot.data![index].name,
+                                    style:
+                                        Theme.of(context).textTheme.titleLarge,
+                                  ),
                                   subtitle: Text(
-                                      "الدنانير اليومية : ${snabshot.data![index].points}"),
+                                    "النقاط اليومية : ${snabshot.data![index].points}",
+                                    style:
+                                        Theme.of(context).textTheme.bodyMedium,
+                                  ),
                                   trailing: Text(
                                     "السعر : ${snabshot.data![index].price}",
+                                    style:
+                                        Theme.of(context).textTheme.labelLarge,
                                   ),
                                   onTap: () {
                                     // here i want to show the  dialog
@@ -162,17 +172,11 @@ class CounterController extends GetxController {
       Get.back();
       return x;
     } catch (e) {
-      // SmartDialog.showNotify(
-      //     msg: "حدث خطا في عملية الشراح", notifyType: NotifyType.error);
       if (e is ServerError) {
-        print(jsonDecode(e.response.body));
-        // Get.snackbar("خطا", e.toString(), borderColor: Colors.red);
         SmartDialog.showNotify(
             msg: jsonDecode(e.response.body)["message"],
             notifyType: NotifyType.error);
       }
-      // print(e);
-
       rethrow;
     }
   }

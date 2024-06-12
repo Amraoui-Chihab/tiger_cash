@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ggggg/controler/agent_controller.dart';
-import 'package:ggggg/view/widget/my_text.dart';
+
+import '../controler/agent_controller.dart';
+import 'widget/my_text.dart';
 
 class AgentsPage extends StatelessWidget {
   const AgentsPage({super.key});

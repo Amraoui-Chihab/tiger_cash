@@ -2,8 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ggggg/controler/apidata.dart';
-import 'package:ggggg/model/user.dart';
+
+import '../model/user.dart';
+import 'apidata.dart';
 
 class TreansfersController extends GetxController {
   Rx<TextEditingController> userId = TextEditingController().obs;

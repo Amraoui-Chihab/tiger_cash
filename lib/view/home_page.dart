@@ -2,13 +2,14 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
-import 'package:ggggg/controler/home_controller.dart';
-import 'package:ggggg/utl/colors.dart';
-import 'package:ggggg/view/agents_page.dart';
-import 'package:ggggg/view/cauntrs_page.dart';
-import 'package:ggggg/view/widget/my_button.dart';
-import 'package:ggggg/view/widget/my_text.dart';
-import 'package:ggggg/view/widget/profile_page.dart';
+import 'package:tigercashiraq/view/profile_page.dart';
+
+import '../controler/home_controller.dart';
+import '../utl/colors.dart';
+import 'agents_page.dart';
+import 'cauntrs_page.dart';
+import 'widget/my_button.dart';
+import 'widget/my_text.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({
@@ -20,7 +21,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myAppBar(context, "الصفحة الرئيسية"),
+      appBar: myAppBar(context, "تايكر كاش العراق"),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -33,16 +34,16 @@ class MyHomePage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         MyText(
-                            titel: "عداد الدنانير",
+                            titel: "عداد النقاط",
                             style: Theme.of(context).textTheme.titleLarge),
                         MyText(
-                            titel: "تجد هنا عداد الدنانير ومستواه",
+                            titel: "تجد هنا عداد النقاط ومستواه",
                             style: Theme.of(context).textTheme.bodySmall),
                       ],
                     ),
                   ),
                   MyButton(
-                      label: const Text("شراء العدادات"),
+                      label: const Text("مضاعفت العداد"),
                       icon: const Icon(Icons.assured_workload),
                       onPressed: () {
                         // controller.getuserInfo();
@@ -64,9 +65,6 @@ class MyHomePage extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              // MyText(
-                              //     titel: "عداد المستوى الفضي",
-                              //     style: Theme.of(context).textTheme.titleSmall),
                               MyText(
                                   titel:
                                       "يتوقف في : ${controller.time.value ~/ 3600}:${(controller.time.value ~/ 60) % 60}:${controller.time.value % 60}",
@@ -124,7 +122,7 @@ class MyHomePage extends StatelessWidget {
                                       }
                                     : null,
                                 child: Text(
-                                  "سحب الدنانير",
+                                  "سحب النقاط",
                                   style: TextStyle(
                                       color: vvv.x ? Colors.white : null),
                                 )),
@@ -142,16 +140,6 @@ class MyHomePage extends StatelessWidget {
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
-          // FutureBuilder(
-          //     future: null,
-          //     builder: (context, snapshot) {
-          //       ///get data from api
-          //       if (snapshot.hasError) {
-          //         return const Center(
-          //             child: MyText(titel: "حصل خطا في جلب الاخبار"));
-          //       }
-          // if (snapshot.hasData) {
-          // return
           SizedBox(
             height: 300,
             child: GetBuilder<HomeController>(
@@ -180,10 +168,6 @@ class MyHomePage extends StatelessWidget {
                                   decoration: const BoxDecoration(
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(15)),
-                                    // image: DecorationImage(
-                                    //   image:
-                                    //       NetworkImage(snapshot.data![index]),
-                                    // )
                                   ),
                                   width: MediaQuery.of(context).size.width - 50,
                                   padding: const EdgeInsets.only(bottom: 5),
@@ -210,11 +194,7 @@ class MyHomePage extends StatelessWidget {
                     });
               },
             ),
-          ) ////////////////
-          // }
-          //   return const Center(child: CircularProgressIndicator());
-          //   // return
-          // })
+          )
         ]),
       ),
     );

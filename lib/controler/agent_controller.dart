@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
-import 'package:ggggg/controler/apidata.dart';
-import 'package:ggggg/model/agent.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+
+import '../model/agent.dart';
+import 'apidata.dart';
 
 class AgentController extends GetxController {
   var agents = <Agent>[].obs;

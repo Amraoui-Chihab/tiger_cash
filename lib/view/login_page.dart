@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
-import 'package:ggggg/controler/apidata.dart';
-import 'package:ggggg/controler/login_getx.dart';
-import 'package:ggggg/view/widget/my_button.dart';
-import 'package:ggggg/view/widget/my_text.dart';
+
+import '../controler/apidata.dart';
+import '../controler/login_getx.dart';
+import 'widget/my_button.dart';
+import 'widget/my_text.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

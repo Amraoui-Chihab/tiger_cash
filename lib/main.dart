@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:ggggg/controler/apidata.dart';
-import 'package:ggggg/error/server_error.dart';
-import 'package:ggggg/utl/colors.dart';
-import 'package:ggggg/view/login_page.dart';
-import 'package:ggggg/view/root_page.dart';
+import 'controler/apidata.dart';
+import 'error/server_error.dart';
 import 'firebase_options.dart';
+import 'utl/colors.dart';
+import 'view/login_page.dart';
+import 'view/root_page.dart';
 
 late Widget defaultHome;
 void main() async {
@@ -45,13 +45,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        title: 'Flutter Demo',
+        title: 'Tiger Cash Iraq',
         theme: ThemeData(
           colorScheme: const ColorScheme.light(primary: Ccolors.primry),
           useMaterial3: true,
         ),
         navigatorObservers: [FlutterSmartDialog.observer],
         builder: FlutterSmartDialog.init(),
+        locale: const Locale("ar", "AE"),
+        // supportedLocales: const [Locale("ar", "AE")],
         home: Directionality(
           textDirection: TextDirection.rtl,
           child: defaultHome,

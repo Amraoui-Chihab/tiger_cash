@@ -2,8 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
-import 'package:ggggg/controler/treansfers_controller.dart';
-import 'package:ggggg/utl/colors.dart';
+
+import '../controler/treansfers_controller.dart';
+import '../utl/colors.dart';
 
 class TransfersPage extends StatelessWidget {
   TransfersPage({super.key});
@@ -26,7 +27,7 @@ class TransfersPage extends StatelessWidget {
             Image.asset('assets/logo.png', height: 50),
             const SizedBox(height: 20),
             const Text(
-              'حول الدنانير الى اي حساب',
+              'حول النقاط الى اي حساب',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
@@ -95,6 +96,7 @@ class TransfersPage extends StatelessWidget {
                                   SmartDialog.showLoading();
                                   await controller.sendMoney();
                                   SmartDialog.dismiss();
+                                  // ignore: use_build_context_synchronously
                                   Navigator.of(context)
                                       .pop(); // إغلاق حوار التأكيد
                                   Get.snackbar("تهانيئا", "تمت العملية بنجاح",
@@ -102,6 +104,7 @@ class TransfersPage extends StatelessWidget {
                                       colorText: Colors.white);
                                 } catch (e) {
                                   SmartDialog.dismiss();
+                                  // ignore: use_build_context_synchronously
                                   Navigator.of(context)
                                       .pop(); // إغلاق حوار التأكيد
                                   var x = jsonDecode(e.toString());

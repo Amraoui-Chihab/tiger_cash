@@ -3,8 +3,9 @@ import 'dart:convert';
 
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:ggggg/controler/apidata.dart';
-import 'package:ggggg/model/user.dart';
+
+import '../model/user.dart';
+import 'apidata.dart';
 
 class HomeController extends GetxController {
   GetStorage box = GetStorage();

@@ -1,23 +1,3 @@
-// class User {
-//   String? apiToken;
-//   User? data;
-
-//   User({
-//     this.apiToken,
-//     this.data,
-//   });
-
-//   factory User.fromJson(Map<String, dynamic> json) => User(
-//         apiToken: json["api_token"],
-//         data: json["data"] == null ? null : Data.fromJson(json["data"]),
-//       );
-
-//   Map<String, dynamic> toJson() => {
-//         "api_token": apiToken,
-//         "data": data?.toJson(),
-//       };
-// }
-
 class User {
   String? id;
   String? name;
@@ -32,6 +12,7 @@ class User {
   DateTime? lastActive;
   DateTime? lastTransction;
   String? balance;
+  int? islimited;
   // DateTime? createdAt;
   // DateTime? updatedAt;
 
@@ -47,6 +28,7 @@ class User {
     this.lastActive,
     this.lastTransction,
     this.balance,
+    this.islimited,
   });
 
   factory User.fromJson(Map<String, dynamic> json) => User(
@@ -57,6 +39,7 @@ class User {
         apiToken: json["api_token"].toString(),
         photoUrl: json["photo_url"].toString(),
         codeInvite: json["code_invite"].toString(),
+        islimited: json["is_limited"],
         // isLimited: json["is_limited"],
         // isSeller: json["is_seller"],
         counterAmount: json["counter_amount"].toString(),

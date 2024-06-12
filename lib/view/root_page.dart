@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:ggggg/utl/colors.dart';
-import 'package:ggggg/view/group_chat_page.dart';
-import 'package:ggggg/view/home_page.dart';
-import 'package:ggggg/view/taiker_store_page.dart';
-import 'package:ggggg/view/transfers_page.dart';
+
+import '../utl/colors.dart';
+import 'group_chat_page.dart';
+import 'home_page.dart';
+import 'taiker_store_page.dart';
+import 'transfers_page.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({super.key});

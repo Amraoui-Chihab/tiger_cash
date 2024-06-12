@@ -5,10 +5,15 @@ import 'dart:convert';
 import 'package:device_information/device_information.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:ggggg/error/server_error.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import 'package:http/http.dart' as http;
+import 'package:tigercashiraq/model/product.dart';
+
+import '../error/server_error.dart';
+
+//   https://tigercashiraq.xyz
+//   http://192.168.40.1:8000
 
 class ApiData {
   static Future<http.Response> postToApi(
@@ -19,7 +24,7 @@ class ApiData {
     String tokrn = box.read("token");
 
     try {
-      Uri uri = Uri.parse("https://tigercashiraq.xyz/$endpoint");
+      Uri uri = Uri.parse("http://192.168.40.1:8000/$endpoint");
       x = await http.post(uri,
           headers: {
             'Accept': 'application/json',
@@ -31,7 +36,6 @@ class ApiData {
     } catch (e) {
       throw Exception(e.toString());
     }
-    print(x.statusCode);
     // print(x.body);
     switch (x.statusCode) {
       case 200:
@@ -59,7 +63,6 @@ class ApiData {
     } catch (e) {
       throw Exception(e.toString());
     }
-    // print(x.body);
     switch (x.statusCode) {
       case 200:
         return x;
@@ -87,6 +90,8 @@ class ApiData {
       throw Exception(e.toString());
     }
     // print(x.body);
+    // print(x.statusCode);
+    // print(jsonDecode(x.body));
     switch (x.statusCode) {
       case 200:
         return x;
@@ -151,14 +156,48 @@ class ApiData {
     } catch (e) {
       throw Exception(e.toString());
     }
-    print(x.statusCode);
-    // print(x.body);
+
     switch (x.statusCode) {
       case 200:
         return x;
       // break;
       default:
         throw ServerError(x);
+    }
+  }
+
+  static Future<void> addPhotoFromGallery(
+      var pickedFile, Product product) async {
+    GetStorage box = GetStorage();
+    String tokrn = box.read("token");
+
+    if (pickedFile != null) {
+      try {
+        var postUri = Uri.parse('https://tigercashiraq.xyz/api/product/create');
+        http.MultipartRequest request = http.MultipartRequest("POST", postUri);
+        request.headers.addAll(
+            {"Accept": "application/json", "Authorization": "Bearer $tokrn"});
+        http.MultipartFile multipartFile =
+            await http.MultipartFile.fromPath('photo', pickedFile.path);
+        request.fields.addAll({
+          // 'price': '100',
+          // 'description': 'weadwa',
+          // 'type': 'food',
+          // 'quntity': '4',
+          // 'name': 'kdao',
+          ////
+          "name": product.name!,
+          "description": product.description!,
+          "quntity": product.quntity!,
+          "price": product.price!,
+          "type": product.type!,
+        });
+
+        request.files.add(multipartFile);
+        await request.send();
+      } catch (e) {
+        throw Exception(e);
+      }
     }
   }
 }

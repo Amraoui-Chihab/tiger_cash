@@ -1,17 +1,19 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:ggggg/controler/apidata.dart';
-import 'package:ggggg/error/server_error.dart';
-import 'package:ggggg/model/user.dart';
-import 'package:ggggg/view/root_page.dart';
-import 'package:ggggg/view/widget/my_button.dart';
-import 'package:ggggg/view/widget/my_text.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:http/http.dart' as http;
+
+import '../error/server_error.dart';
+import '../model/user.dart';
+import '../view/root_page.dart';
+import '../view/widget/my_button.dart';
+import '../view/widget/my_text.dart';
+import 'apidata.dart';
 
 class LoginGetx extends GetxController {
   TextEditingController codeController = TextEditingController();
@@ -19,9 +21,18 @@ class LoginGetx extends GetxController {
     http.Response x;
     GetStorage box = GetStorage();
     try {
-      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+      final GoogleSignInAccount? googleUser =
+          await GoogleSignIn().signIn().catchError(
+        (e) {
+          print(e);
+        },
+      );
       final GoogleSignInAuthentication? googleAuth =
           await googleUser?.authentication;
+      print(googleAuth!.accessToken.toString());
+      if (kDebugMode) {
+        print(googleAuth!.accessToken.toString());
+      }
       x = await ApiData.loginToMyApi(googleAuth!.accessToken.toString(), code);
       Get.snackbar('تم تسجيل الدخول بنجاح ', "code",
           backgroundColor: Colors.green);
