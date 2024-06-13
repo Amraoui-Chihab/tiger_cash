@@ -43,7 +43,7 @@ class MyHomePage extends StatelessWidget {
                     ),
                   ),
                   MyButton(
-                      label: const Text("مضاعفت العداد"),
+                      label: const Text("مضاعفة العداد"),
                       icon: const Icon(Icons.assured_workload),
                       onPressed: () {
                         // controller.getuserInfo();

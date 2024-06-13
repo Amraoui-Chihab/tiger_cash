@@ -21,15 +21,10 @@ class LoginGetx extends GetxController {
     http.Response x;
     GetStorage box = GetStorage();
     try {
-      final GoogleSignInAccount? googleUser =
-          await GoogleSignIn().signIn().catchError(
-        (e) {
-          print(e);
-        },
-      );
+      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
       final GoogleSignInAuthentication? googleAuth =
           await googleUser?.authentication;
-      print(googleAuth!.accessToken.toString());
+      // print(googleAuth!.accessToken.toString());
       if (kDebugMode) {
         print(googleAuth!.accessToken.toString());
       }

@@ -24,7 +24,7 @@ class ApiData {
     String tokrn = box.read("token");
 
     try {
-      Uri uri = Uri.parse("http://192.168.40.1:8000/$endpoint");
+      Uri uri = Uri.parse("https://tigercashiraq.xyz/$endpoint");
       x = await http.post(uri,
           headers: {
             'Accept': 'application/json',

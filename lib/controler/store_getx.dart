@@ -9,7 +9,7 @@ import 'package:tigercashiraq/model/user.dart';
 
 class StoreController extends GetxController {
   var categories =
-      ["الملاس و اكسسوارات", "الاجهزة الاكهربائي", "منتجات اخرى"].obs;
+      ["الملابس و الاكسسوارات", "الاجهزة الكهربائية", "منتجات اخرى"].obs;
   var selectedCategory = 0.obs;
   var selectedTipy = "clothes".obs;
   var products = <dynamic>[].obs;
