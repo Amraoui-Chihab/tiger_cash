@@ -13,23 +13,23 @@ class User {
   DateTime? lastTransction;
   String? balance;
   int? islimited;
-  // DateTime? createdAt;
+  DateTime? createdAt;
   // DateTime? updatedAt;
 
-  User({
-    this.id,
-    this.name,
-    this.deviceId,
-    this.accountId,
-    this.apiToken,
-    this.photoUrl,
-    this.codeInvite,
-    this.counterAmount,
-    this.lastActive,
-    this.lastTransction,
-    this.balance,
-    this.islimited,
-  });
+  User(
+      {this.id,
+      this.name,
+      this.deviceId,
+      this.accountId,
+      this.apiToken,
+      this.photoUrl,
+      this.codeInvite,
+      this.counterAmount,
+      this.lastActive,
+      this.lastTransction,
+      this.balance,
+      this.islimited,
+      this.createdAt});
 
   factory User.fromJson(Map<String, dynamic> json) => User(
         id: json["id"].toString(),
@@ -50,9 +50,9 @@ class User {
             ? null
             : DateTime.parse(json["last_transction"].toString()),
         balance: json["balance"].toString(),
-        // createdAt: json["created_at"] == null
-        //     ? null
-        //     : DateTime.parse(json["created_at"]),
+        createdAt: json["created_at"] == null
+            ? null
+            : DateTime.parse(json["created_at"]),
         // updatedAt: json["updated_at"] == null
         //     ? null
         //     : DateTime.parse(json["updated_at"]),

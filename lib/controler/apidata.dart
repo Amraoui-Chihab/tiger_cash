@@ -16,6 +16,8 @@ import '../error/server_error.dart';
 //   http://192.168.40.1:8000
 
 class ApiData {
+  // static const String baseUrl = 'https://tigercashiraq.xyz';
+  static const String baseUrl = 'http://192.168.40.1:8000';
   static Future<http.Response> postToApi(
       String endpoint, Map<String, String> body) async {
     http.Response x;
@@ -24,7 +26,7 @@ class ApiData {
     String tokrn = box.read("token");
 
     try {
-      Uri uri = Uri.parse("https://tigercashiraq.xyz/$endpoint");
+      Uri uri = Uri.parse("$baseUrl/$endpoint");
       x = await http.post(uri,
           headers: {
             'Accept': 'application/json',
@@ -36,7 +38,7 @@ class ApiData {
     } catch (e) {
       throw Exception(e.toString());
     }
-    // print(x.body);
+    print(jsonDecode(x.body));
     switch (x.statusCode) {
       case 200:
         return x;
@@ -53,7 +55,7 @@ class ApiData {
     String tokrn = box.read("token");
 
     try {
-      Uri uri = Uri.parse("https://tigercashiraq.xyz/$endpoint");
+      Uri uri = Uri.parse("$baseUrl/$endpoint");
       x = await http.get(uri, headers: {
         'Accept': 'application/json',
         "content-type": "application/json",
@@ -63,6 +65,7 @@ class ApiData {
     } catch (e) {
       throw Exception(e.toString());
     }
+    // print(jsonDecode(x.body));
     switch (x.statusCode) {
       case 200:
         return x;
@@ -79,7 +82,7 @@ class ApiData {
     String tokrn = box.read("token");
 
     try {
-      Uri uri = Uri.parse("https://tigercashiraq.xyz/$endpoint");
+      Uri uri = Uri.parse("$baseUrl/$endpoint");
       x = await http.get(uri, headers: {
         'Accept': 'application/json',
         "content-type": "application/json",
@@ -106,7 +109,7 @@ class ApiData {
     try {
       requestPhoneStatePermission();
       var imeiNo = await DeviceInformation.deviceIMEINumber;
-      Uri uri = Uri.parse("https://tigercashiraq.xyz/api/user/getToken");
+      Uri uri = Uri.parse("$baseUrl/api/user/getToken");
       x = await http.post(uri,
           headers: {
             'Accept': 'application/json',
@@ -144,7 +147,7 @@ class ApiData {
     String tokrn = box.read("token");
 
     try {
-      Uri uri = Uri.parse("https://tigercashiraq.xyz/$endpoint");
+      Uri uri = Uri.parse("$baseUrl/$endpoint");
       x = await http.post(uri,
           headers: {
             'Accept': 'application/json',
@@ -173,19 +176,13 @@ class ApiData {
 
     if (pickedFile != null) {
       try {
-        var postUri = Uri.parse('https://tigercashiraq.xyz/api/product/create');
+        var postUri = Uri.parse('$baseUrl/api/product/create');
         http.MultipartRequest request = http.MultipartRequest("POST", postUri);
         request.headers.addAll(
             {"Accept": "application/json", "Authorization": "Bearer $tokrn"});
         http.MultipartFile multipartFile =
             await http.MultipartFile.fromPath('photo', pickedFile.path);
         request.fields.addAll({
-          // 'price': '100',
-          // 'description': 'weadwa',
-          // 'type': 'food',
-          // 'quntity': '4',
-          // 'name': 'kdao',
-          ////
           "name": product.name!,
           "description": product.description!,
           "quntity": product.quntity!,

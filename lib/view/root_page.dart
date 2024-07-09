@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:tigercashiraq/view/profile_page.dart';
 
 import '../utl/colors.dart';
 import 'group_chat_page.dart';
@@ -24,6 +25,9 @@ class _RootPageState extends State<RootPage> {
       const GroupChatPage(),
       TransfersPage(),
       const TaikerStorePage(),
+      ProfilePage(
+          // user: controller.user.value,
+          ),
     ];
   }
 
@@ -59,6 +63,10 @@ class _RootPageState extends State<RootPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.store),
             label: 'تايكر ستور',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'حسابي',
           ),
         ],
       ),

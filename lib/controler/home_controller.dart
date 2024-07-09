@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
@@ -12,11 +13,14 @@ class HomeController extends GetxController {
   Rx<User> user = User().obs;
   RxInt time = 0.obs;
   RxBool istimeon = false.obs;
+  RxString news = "".obs;
+  RxString dvsdr = "1".obs;
 
   @override
   void onInit() {
     super.onInit();
     getuserInfo();
+    generalInformation();
   }
 
   Future getuserInfo() async {
@@ -71,11 +75,40 @@ class HomeController extends GetxController {
       for (var element in jsonData["data"]) {
         imageList.add(element['photo_url']);
       }
-      return imageList;
+      // return imageList;
+      return [
+        "https://picsum.photos/seed/picsum/200/300",
+        "https://picsum.photos/id/237/200/300",
+      ];
     } else {
       throw Exception('Failed to load images');
     }
   }
+
+  Future generalInformation() async {
+    try {
+      var response = await ApiData.getToApi("api/generalInformation/get");
+      final data = jsonDecode(response.body);
+      news.value = data["الاخبار"];
+      dvsdr.value = data["عدد النقاط لكل دولار"];
+      print(data);
+    } catch (e) {
+      throw Exception(e);
+    }
+  }
+}
+
+double getTextWidth(String text, double fontSize) {
+  final textPainter = TextPainter(
+    text: TextSpan(
+      text: text,
+      style: TextStyle(fontSize: fontSize),
+    ),
+    maxLines: 1,
+    textDirection: TextDirection.rtl,
+  )..layout(minWidth: 0, maxWidth: double.infinity);
+
+  return textPainter.size.width;
 }
 
 class SheckTime extends GetxController {
