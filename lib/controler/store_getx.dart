@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:tigercashiraq/controler/apidata.dart';
+import 'package:tigercashiraq/Api%20Server/apidata.dart';
 import 'package:tigercashiraq/error/server_error.dart';
 import 'package:tigercashiraq/model/product.dart';
 import 'package:http/http.dart' as http;
@@ -20,18 +20,6 @@ class StoreController extends GetxController {
   void onInit() {
     super.onInit();
     fetchProducts();
-    getuserInfo();
-  }
-
-  Future getuserInfo() async {
-    try {
-      var x = await ApiData.getToApi("api/user/viewMy");
-      User userz = User.fromJson(jsonDecode(x.body)["data"]);
-      user.value = userz;
-      // await box.write("user", user);
-    } catch (e) {
-      throw Exception("ggggg");
-    }
   }
 
   void selectCategory(int index) {

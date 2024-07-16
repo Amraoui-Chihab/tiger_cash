@@ -1,12 +1,11 @@
 import 'dart:async';
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-
+import 'package:tigercashiraq/view/block_page.dart';
 import '../model/user.dart';
-import 'apidata.dart';
+import '../Api Server/apidata.dart';
 
 class HomeController extends GetxController {
   GetStorage box = GetStorage();
@@ -26,8 +25,16 @@ class HomeController extends GetxController {
   Future getuserInfo() async {
     try {
       var x = await ApiData.getToApi("api/user/viewMy");
+      print(jsonDecode(x.body)["block"]);
       time.value = jsonDecode(x.body)["rest_time"];
       user.value = User.fromJson(jsonDecode(x.body)["data"]);
+      if (jsonDecode(x.body)["block"]["is_blocked"]) {
+        Get.snackbar("خطا", "لقد تم حضرك من التطبيق",
+            backgroundColor: Colors.red);
+        Get.offAll(() => BlockPage(
+              time: jsonDecode(x.body)["block"]["seconds_rest"],
+            ));
+      }
       timeon();
     } catch (e) {
       rethrow;
@@ -75,11 +82,11 @@ class HomeController extends GetxController {
       for (var element in jsonData["data"]) {
         imageList.add(element['photo_url']);
       }
-      // return imageList;
-      return [
-        "https://picsum.photos/seed/picsum/200/300",
-        "https://picsum.photos/id/237/200/300",
-      ];
+      return imageList;
+      // return [
+      //   "https://picsum.photos/seed/picsum/200/300",
+      //   "https://picsum.photos/id/237/200/300",
+      // ];
     } else {
       throw Exception('Failed to load images');
     }
@@ -91,7 +98,6 @@ class HomeController extends GetxController {
       final data = jsonDecode(response.body);
       news.value = data["الاخبار"];
       dvsdr.value = data["عدد النقاط لكل دولار"];
-      print(data);
     } catch (e) {
       throw Exception(e);
     }

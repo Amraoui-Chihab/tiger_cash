@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 
 import '../model/user.dart';
-import 'apidata.dart';
+import '../Api Server/apidata.dart';
 
 class Profile extends GetxController {
   User user = User();

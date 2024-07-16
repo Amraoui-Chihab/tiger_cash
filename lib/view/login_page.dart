@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 
-import '../controler/apidata.dart';
+import '../Api Server/apidata.dart';
 import '../controler/login_getx.dart';
 import 'widget/my_button.dart';
 import 'widget/my_text.dart';

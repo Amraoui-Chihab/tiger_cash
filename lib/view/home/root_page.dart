@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:tigercashiraq/view/profile_page.dart';
+import 'package:tigercashiraq/view/profile/profile_page.dart';
+import 'package:tigercashiraq/view/videos/videos_veiw.dart';
 
-import '../utl/colors.dart';
-import 'group_chat_page.dart';
+import '../../utl/colors.dart';
+import '../chat/group_chat_page.dart';
 import 'home_page.dart';
-import 'taiker_store_page.dart';
-import 'transfers_page.dart';
+import '../store/taiker_store_page.dart';
+import '../transfers_page.dart';
 
 class RootPage extends StatefulWidget {
   const RootPage({super.key});
@@ -23,8 +24,9 @@ class _RootPageState extends State<RootPage> {
     return [
       MyHomePage(),
       const GroupChatPage(),
-      TransfersPage(),
+      const PageViewExample(),
       const TaikerStorePage(),
+      TransfersPage(),
       ProfilePage(
           // user: controller.user.value,
           ),
@@ -45,6 +47,7 @@ class _RootPageState extends State<RootPage> {
         selectedItemColor: Ccolors.primry,
         unselectedItemColor: Colors.grey.shade900,
         showUnselectedLabels: true,
+        showSelectedLabels: true,
         currentIndex: _currentIndex,
         onTap: _onTap,
         items: const [
@@ -53,16 +56,20 @@ class _RootPageState extends State<RootPage> {
             label: 'الرئيسية',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'دردشة',
+            icon: Icon(Icons.star),
+            label: 'الترفيه',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.video_collection_outlined),
+            label: 'ريلز',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.store),
+            label: 'ستور',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.swap_horiz),
             label: 'الحوالات',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.store),
-            label: 'تايكر ستور',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),

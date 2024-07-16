@@ -143,7 +143,7 @@ class TransfersPage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Text("ملاحضات التحويل",
+              Text("ملاحظات التحويل",
                   style: TextStyle(fontSize: 18, color: Colors.grey[850])),
               const SizedBox(
                 height: 10,

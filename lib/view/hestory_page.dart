@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:tigercashiraq/controler/apidata.dart';
+import 'package:tigercashiraq/Api%20Server/apidata.dart';
 import 'package:tigercashiraq/error/server_error.dart';
 import 'package:tigercashiraq/model/history.dart';
 import 'package:tigercashiraq/model/user.dart';
@@ -28,9 +28,9 @@ class HestoryPage extends StatelessWidget {
               controller: controller.listController,
               itemCount: controller.tame.length,
               itemBuilder: (context, index) {
-                String data = chackData(
-                        controller.tame[index].ownerId, user.id.toString())
-                    .toString();
+                String data =
+                    chackData(controller.tame[index], user.id.toString())
+                        .toString();
                 return Column(
                   children: [
                     ListTile(
@@ -39,16 +39,16 @@ class HestoryPage extends StatelessWidget {
                             ? Colors.red
                             : data == "استلام"
                                 ? Colors.green
-                                : null,
-                        child:
-                            // data == "تفعيل العداد"
-                            //     ? Icon(Ic)
-                            // :
-                            Icon(data == "تحويل"
-                                ? Icons.arrow_upward
+                                : data == "تفعيل العداد"
+                                    ? null
+                                    : Colors.orange,
+                        child: Icon(data == "تحويل"
+                            ? Icons.arrow_upward
+                            : data == "استلام"
+                                ? Icons.arrow_downward
                                 : data == "استلام"
-                                    ? Icons.arrow_downward
-                                    : Icons.access_time),
+                                    ? Icons.access_time
+                                    : Icons.card_giftcard),
                       ),
                       title: Text(
                         data,
@@ -56,16 +56,18 @@ class HestoryPage extends StatelessWidget {
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       subtitle: data == "تفعيل العداد"
-                          ? Text(" ")
+                          ? const Text(" ")
                           : Text(
                               data == "تحويل"
                                   ? "الى صاحب كود الاحالة : ${controller.tame[index].userId}"
-                                  : "من قبل صاحب كود الاحالة : ${controller.tame[index].ownerId}",
+                                  : data == "استلام"
+                                      ? "من قبل صاحب كود الاحالة : ${controller.tame[index].ownerId}"
+                                      : "",
                               style: const TextStyle(fontSize: 15),
                             ),
                       trailing: Text(
                         // "TCI " +
-                        "${controller.tame[index].amount} TCI\n${controller.tame[index].createdAt.substring(0, 10)}",
+                        "${controller.tame[index].amount == "null" ? controller.tame[index].gift.cost : controller.tame[index].amount} TCI\n${controller.tame[index].createdAt.substring(0, 10)}",
                         style: const TextStyle(fontSize: 15),
                         textDirection: TextDirection.ltr,
                         textAlign: TextAlign.center,
@@ -91,13 +93,21 @@ class HestoryPage extends StatelessWidget {
   }
 }
 
-String chackData(String id, String myid) {
-  if (id == myid) {
-    return "تحويل";
-  } else if (id == "1") {
+String chackData(var history, String myid) {
+  if (history.ownerId.toString() == myid) {
+    if (history.gift != null) {
+      return "ارسال هدية";
+    } else {
+      return "تحويل";
+    }
+  } else if (history.ownerId.toString() == "1") {
     return "تفعيل العداد";
   } else {
-    return "استلام";
+    if (history.gift != null) {
+      return "استلام هدية";
+    } else {
+      return "استلام";
+    }
   }
 }
 
@@ -120,18 +130,15 @@ class HestoryController extends GetxController {
       final response =
           await ApiData.getToApi1("api/transactions/get?page=$page");
       var jsonData = jsonDecode(response.body);
-      print(jsonData);
       // tame.clear();
+      print(jsonDecode(response.body));
       List<dynamic> data = jsonData["data"]
           .map((json) => History.fromDocumentSnapshot(json))
           .toList();
-      print(data);
       tame.addAll(data);
       isloding.value = false;
     } catch (e) {
-      if (e is ServerError) {
-        print(e.response.body);
-      }
+      if (e is ServerError) {}
       isloding.value = false;
       print(e);
     }
@@ -140,10 +147,7 @@ class HestoryController extends GetxController {
   Future oo() async {
     listController.addListener(() {
       if (listController.position.atEdge) {
-        print("1");
         if (listController.position.pixels != 0) {
-          print("2");
-          print(page.value);
           page.value++;
           frishdata();
         }

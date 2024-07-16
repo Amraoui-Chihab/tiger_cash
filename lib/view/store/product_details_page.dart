@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
-import 'package:tigercashiraq/controler/apidata.dart';
+import 'package:tigercashiraq/Api%20Server/apidata.dart';
 import 'package:tigercashiraq/error/server_error.dart';
 import 'package:tigercashiraq/model/product.dart';
 import 'package:tigercashiraq/utl/colors.dart';

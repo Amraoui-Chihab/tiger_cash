@@ -10,10 +10,10 @@ import 'package:http/http.dart' as http;
 
 import '../error/server_error.dart';
 import '../model/user.dart';
-import '../view/root_page.dart';
+import '../view/home/root_page.dart';
 import '../view/widget/my_button.dart';
 import '../view/widget/my_text.dart';
-import 'apidata.dart';
+import '../Api Server/apidata.dart';
 
 class LoginGetx extends GetxController {
   TextEditingController codeController = TextEditingController();

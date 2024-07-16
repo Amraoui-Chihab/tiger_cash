@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:tigercashiraq/controler/apidata.dart';
+import 'package:tigercashiraq/Api%20Server/apidata.dart';
 import 'package:tigercashiraq/model/product.dart';
 import 'package:tigercashiraq/model/proudct_pay.dart';
 

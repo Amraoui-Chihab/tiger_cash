@@ -1,4 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:tigercashiraq/model/gift.dart';
 
 class History {
   final String? id;
@@ -6,6 +6,7 @@ class History {
   final String? userId;
   final String? note;
   final String? amount;
+  final Gift? gift;
   final String? createdAt;
 
   History(
@@ -14,6 +15,7 @@ class History {
       this.userId,
       this.note,
       this.amount,
+      this.gift,
       this.createdAt});
 
   factory History.fromDocumentSnapshot(Map<String, dynamic> doc) {
@@ -23,6 +25,7 @@ class History {
       userId: doc["user_id"].toString(),
       note: doc["note"].toString(),
       amount: doc["amount"].toString(),
+      gift: doc["gift"] == null ? null : Gift.fromJson(doc["gift"]),
       createdAt: doc["created_at"].toString(),
     );
   }

@@ -16,8 +16,8 @@ import '../error/server_error.dart';
 //   http://192.168.40.1:8000
 
 class ApiData {
-  // static const String baseUrl = 'https://tigercashiraq.xyz';
-  static const String baseUrl = 'http://192.168.40.1:8000';
+  static const String baseUrl = 'https://tigercashiraq.xyz';
+  // static const String baseUrl = 'http://192.168.40.1:8000';
   static Future<http.Response> postToApi(
       String endpoint, Map<String, String> body) async {
     http.Response x;
@@ -38,7 +38,6 @@ class ApiData {
     } catch (e) {
       throw Exception(e.toString());
     }
-    print(jsonDecode(x.body));
     switch (x.statusCode) {
       case 200:
         return x;
@@ -119,6 +118,7 @@ class ApiData {
               ? jsonEncode({
                   "access_token": endpoint,
                   "device_id": imeiNo,
+                  "version": "1"
                 })
               : jsonEncode({
                   "code_invite": code,
@@ -162,6 +162,7 @@ class ApiData {
 
     switch (x.statusCode) {
       case 200:
+      case 201:
         return x;
       // break;
       default:

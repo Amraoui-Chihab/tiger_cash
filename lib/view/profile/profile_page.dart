@@ -1,14 +1,12 @@
-import 'dart:convert';
 import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:tigercashiraq/controler/home_controller.dart';
-import 'package:tigercashiraq/error/server_error.dart';
-import '../../controler/profile_get.dart';
-import '../../model/user.dart';
-import '../../utl/colors.dart';
+import 'package:tigercashiraq/view/profile/widgets/cheningname.dart';
+import 'package:tigercashiraq/view/profile/widgets/cheningphoto.dart';
+import '../../../controler/profile_get.dart';
+import '../../../model/user.dart';
+import '../../../utl/colors.dart';
 import 'time_viow.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -32,18 +30,6 @@ class ProfilePage extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // const SizedBox(height: 20),
-                          // const Text(
-                          //   'الملف الشخصي',
-                          //   style: TextStyle(
-                          //       fontSize: 24, fontWeight: FontWeight.bold),
-                          //   textAlign: TextAlign.center,
-                          // ),
-                          // const Text(
-                          //   'تجد هنا جميع معلوماتك',
-                          //   style: TextStyle(fontSize: 16, color: Colors.grey),
-                          //   textAlign: TextAlign.center,
-                          // ),
                           Stack(
                             children: [
                               Image.network(
@@ -174,7 +160,15 @@ class ProfilePage extends StatelessWidget {
                               Get.to(const TimeViow());
                             },
                           ),
-
+                          // ListTile(
+                          //   leading: const Icon(Icons.group),
+                          //   title: const Text('فديوهاتي'),
+                          //   trailing: const Icon(Icons.arrow_forward_sharp),
+                          //   subtitle: const Text(""),
+                          //   onTap: () {
+                          //     Get.to(() => MyVideo());
+                          //   },
+                          // ),
                           const ListTile(
                             leading: Icon(Icons.login),
                             title: Text('تسجيل الدخول'),
@@ -188,131 +182,4 @@ class ProfilePage extends StatelessWidget {
           }),
     );
   }
-}
-
-void cheningname(Profile controller) {
-  Get.dialog(
-    AlertDialog(
-      title: const Text('تغير اسم المستخدم'),
-      content: Form(
-        key: controller.formKey,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Text('سيتم قطع 3000 نقطة مقابل عملة تغير الاسم'),
-            const SizedBox(
-              height: 10,
-            ),
-            TextFormField(
-              controller: controller.nameController,
-              decoration: const InputDecoration(
-                hintText: 'ادخل اسم المستخدم',
-              ),
-              validator: (value) {
-                if (value!.length < 3) {
-                  return 'ادخل اسم المستخدم';
-                }
-                return null;
-              },
-            ),
-          ],
-        ),
-      ),
-      actions: [
-        TextButton(
-          onPressed: () {
-            Get.back();
-          },
-          child: const Text('الغاء'),
-        ),
-        TextButton(
-          onPressed: () async {
-            if (controller.formKey.currentState!.validate()) {
-              try {
-                SmartDialog.showLoading();
-                await controller.setUserName();
-                Get.back();
-                SmartDialog.dismiss();
-                // var user=Get.find()
-
-                Get.snackbar(
-                  'تم تغير الاسم بنجاح',
-                  'تم تغير الاسم بنجاح',
-                  backgroundColor: Colors.green,
-                );
-              } catch (e) {
-                if (e is ServerError) {
-                  Get.snackbar(
-                    'خطأ',
-                    jsonDecode(e.response.body)["message"].toString(),
-                    backgroundColor: Colors.red,
-                  );
-                } else {
-                  Get.snackbar(
-                    'خطأ',
-                    "حدث خطا ما",
-                    backgroundColor: Colors.red,
-                  );
-                }
-
-                SmartDialog.dismiss();
-              }
-            }
-            // Get.to(() => const ProfilePage());
-          },
-          child: const Text('تاكيد'),
-        ),
-      ],
-    ),
-  );
-}
-
-void cheningphoto(Profile controller) {
-  // File? image;
-
-  Get.dialog(
-    AlertDialog(
-      title: const Text('تغير الصورة'),
-      content: const Text('سيتم قطع 5000 نقطة مقابل عملة تغير الصورة الشخصية'),
-      actions: [
-        TextButton(
-          onPressed: () {
-            Get.back();
-          },
-          child: const Text('الغاء'),
-        ),
-        TextButton(
-          onPressed: () async {
-            final ImagePicker picker = ImagePicker();
-            final pickedFile =
-                await picker.pickImage(source: ImageSource.gallery);
-            SmartDialog.showLoading();
-            if (pickedFile != null) {
-              // image = File(pickedFile.path);
-              try {
-                await controller.addPhotoFromGallery(pickedFile);
-                Get.back();
-                Get.snackbar(
-                  'تم تغير الصورة بنجاح',
-                  'تم تغير الصورة بنجاح',
-                  backgroundColor: Colors.green,
-                );
-              } catch (e) {
-                if (e is ServerError) {}
-                Get.snackbar(
-                  'خطأ',
-                  e.toString(),
-                  backgroundColor: Colors.red,
-                );
-                throw Exception("حدث خطا ما");
-              } finally {
-                SmartDialog.dismiss();
-              }
-            }
-          },
-          child: const Text('تاكيد'),
-        ),
-      ],
-    ),
-  );
 }

@@ -1,11 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tigercashiraq/controler/home_controller.dart';
 import 'package:tigercashiraq/controler/store_getx.dart';
 import 'package:tigercashiraq/utl/colors.dart';
-import 'package:tigercashiraq/view/add_product_page.dart';
-import 'package:tigercashiraq/view/product_details_page.dart';
-import 'package:tigercashiraq/view/my_itim.dart';
+import 'package:tigercashiraq/view/store/add_product_page.dart';
+import 'package:tigercashiraq/view/store/product_details_page.dart';
+import 'package:tigercashiraq/view/store/my_itim.dart';
 
 class TaikerStorePage extends StatelessWidget {
   const TaikerStorePage({super.key});
@@ -13,13 +14,14 @@ class TaikerStorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final StoreController controller = Get.put(StoreController());
+    final HomeController homeController = Get.find();
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('تايكر ستور'),
         centerTitle: true,
         actions: [
-          controller.user.value.islimited == 0
+          homeController.user.value.islimited == 0
               ? Row(
                   children: [
                     IconButton(

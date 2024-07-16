@@ -5,7 +5,7 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
-import '../controler/apidata.dart';
+import '../Api Server/apidata.dart';
 import '../controler/home_controller.dart';
 import '../error/server_error.dart';
 import '../model/counter.dart';
@@ -59,7 +59,7 @@ class CauntrsPage extends StatelessWidget {
                                   title: Text(
                                     snabshot.data![index].name,
                                     style:
-                                        Theme.of(context).textTheme.titleLarge,
+                                        Theme.of(context).textTheme.titleMedium,
                                   ),
                                   subtitle: Text(
                                     "النقاط اليومية : ${snabshot.data![index].points}",

@@ -2,8 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart' as http;
-import 'package:tigercashiraq/controler/apidata.dart';
+import 'package:tigercashiraq/Api%20Server/apidata.dart';
 import 'package:tigercashiraq/error/server_error.dart';
 
 import 'package:tigercashiraq/model/user.dart';
@@ -46,13 +45,13 @@ class TimeViow extends StatelessWidget {
                                   ),
                                   title: Text(
                                     snapshot.data![index].name.toString(),
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold),
                                   ),
                                   subtitle: Text(
                                     snapshot.data![index].createdAt.toString(),
-                                    style: TextStyle(fontSize: 15),
+                                    style: const TextStyle(fontSize: 15),
                                   ),
                                 ),
                                 Padding(
@@ -94,12 +93,8 @@ class TimeController extends GetxController {
       // print(jsonData);
       // print(jsonData[0]["user"]);
       List data = jsonData as List;
-      print(data.length);
       List time = [];
       for (var i = 0; i < data.length; i++) {
-        print("object");
-        print(data[i]);
-        print(User.fromJson(data[i]));
         time.add(User.fromJson(data[i]["user"]));
         // print(data[i].map((json) => User.fromJson(json)).toList());
       }

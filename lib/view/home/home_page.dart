@@ -5,12 +5,12 @@ import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:get/get.dart';
 import 'package:gradient_circular_progress_indicator/gradient_circular_progress_indicator.dart';
 import 'package:tigercashiraq/view/hestory_page.dart';
-import '../controler/home_controller.dart';
-import '../utl/colors.dart';
-import 'agents_page.dart';
-import 'cauntrs_page.dart';
-import 'widget/my_button.dart';
-import 'widget/my_text.dart';
+import '../../controler/home_controller.dart';
+import '../../utl/colors.dart';
+import '../agents_page.dart';
+import '../cauntrs_page.dart';
+import '../widget/my_button.dart';
+import '../widget/my_text.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({
@@ -134,13 +134,20 @@ class MyHomePage extends StatelessWidget {
                       future: _.getImigeFromeApi(),
                       builder: (context, snapshot) {
                         if (snapshot.hasError) {
-                          return const Center(
-                              child: Text("حصل خطا في تحميل الاخبار"));
+                          return const SizedBox(
+                            width: double.maxFinite,
+                            height: 200,
+                            child:
+                                Center(child: Text("حصل خطا في تحميل الاخبار")),
+                          );
                         }
                         if (snapshot.hasData) {
                           if (snapshot.data!.isEmpty) {
-                            return const Center(
-                                child: Text("لايوجد اخبار الان"));
+                            return const SizedBox(
+                                width: double.maxFinite,
+                                height: 200,
+                                child:
+                                    Center(child: Text("لايوجد اخبار الان")));
                           }
                           return CarouselSlider(
                             options: CarouselOptions(
@@ -190,7 +197,7 @@ class MyHomePage extends StatelessWidget {
                         newsText(context, controller.news.value),
                         textDirection: TextDirection.rtl,
                         style:
-                            const TextStyle(fontSize: 22, color: Colors.white),
+                            const TextStyle(fontSize: 18, color: Colors.white),
                       ),
                     )),
               ],
@@ -205,8 +212,8 @@ class MyHomePage extends StatelessWidget {
   }
 
   String newsText(BuildContext context, String text) {
-    int x = ((MediaQuery.of(context).size.width - getTextWidth(text, 22)) /
-            getTextWidth(" ", 22))
+    int x = ((MediaQuery.of(context).size.width - getTextWidth(text, 18)) /
+            getTextWidth(" ", 18))
         .toInt();
     return text + " " * x + (x <= 0 ? " " * 10 : " ").toString();
   }
@@ -257,10 +264,12 @@ class MyHomePage extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Obx(() => Text(
-                      (int.parse(controller.user.value.balance == null
-                                  ? "0"
-                                  : controller.user.value.balance.toString()) /
-                              double.parse(controller.dvsdr.toString()))
+                      num.parse((int.parse(controller.user.value.balance == null
+                                      ? "0"
+                                      : controller.user.value.balance
+                                          .toString()) /
+                                  double.parse(controller.dvsdr.toString()))
+                              .toStringAsFixed(2))
                           .toString(),
                       style:
                           const TextStyle(color: Colors.white, fontSize: 13))),

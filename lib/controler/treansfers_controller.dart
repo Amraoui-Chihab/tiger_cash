@@ -2,9 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tigercashiraq/view/block_page.dart';
 
 import '../model/user.dart';
-import 'apidata.dart';
+import '../Api Server/apidata.dart';
 
 class TreansfersController extends GetxController {
   Rx<TextEditingController> userId = TextEditingController().obs;
@@ -27,10 +28,17 @@ class TreansfersController extends GetxController {
   Future getuserInfo() async {
     try {
       var x = await ApiData.getToApi("api/user/viewMy");
-      User userz = User.fromJson(jsonDecode(x.body)["data"]);
-      user.value = userz;
+      print(jsonDecode(x.body)["block"]);
+      user.value = User.fromJson(jsonDecode(x.body)["data"]);
+      if (jsonDecode(x.body)["block"]["is_blocked"]) {
+        Get.snackbar("خطا", "لقد تم حضرك من التطبيق",
+            backgroundColor: Colors.red);
+        Get.offAll(BlockPage(
+          time: jsonDecode(x.body)["block"]["seconds_rest"],
+        ));
+      }
     } catch (e) {
-      throw Exception("ggggg");
+      rethrow;
     }
   }
 
@@ -50,7 +58,6 @@ class TreansfersController extends GetxController {
       costTran.value = data["عمولة التحويل"].toString();
       maxTran.value = data["اعلى حد للتحويل"].toString();
       minTran.value = data["اقل حد للتحويل"].toString();
-      print(data);
     } catch (e) {
       throw Exception(e);
     }
