@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        title: 'بابل كاش',
+        title: 'Tiger Cash Iraq',
         theme: ThemeData(
             colorScheme: const ColorScheme.light(primary: Ccolors.primry),
             useMaterial3: true,

@@ -7,7 +7,7 @@ import 'package:tigercashiraq/utl/colors.dart';
 
 Widget buildMessageInput(ChatController chatController) {
   final TextEditingController messageController = TextEditingController();
-  // final SheckTime sheckTime = Get.put(SheckTime());
+  final SheckTime sheckTime = Get.put(SheckTime());
   final HomeController homeController = Get.find();
   return Padding(
     padding: const EdgeInsets.all(8.0),

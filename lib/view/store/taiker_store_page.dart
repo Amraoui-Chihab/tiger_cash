@@ -18,7 +18,7 @@ class TaikerStorePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('بابل ستور'),
+        title: const Text('تايكر ستور'),
         centerTitle: true,
         actions: [
           homeController.user.value.islimited == 0

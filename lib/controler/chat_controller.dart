@@ -33,6 +33,7 @@ class ChatController extends GetxController {
   Future getuserInfo() async {
     try {
       var x = await ApiData.getToApi("api/user/viewMy");
+      print(jsonDecode(x.body)["block"]);
       user.value = User.fromJson(jsonDecode(x.body)["data"]);
       if (jsonDecode(x.body)["block"]["is_blocked"]) {
         Get.snackbar("خطا", "لقد تم حضرك من التطبيق",
