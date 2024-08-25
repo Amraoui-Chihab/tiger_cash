@@ -22,7 +22,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: myAppBar(context, "تايكر كاش العراق"),
+      appBar: myAppBar(context, "بابل كاش "),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: SingleChildScrollView(
@@ -238,7 +238,7 @@ class MyHomePage extends StatelessWidget {
                     radius: 13,
                     backgroundColor: Colors.white,
                     child: Text(
-                      "TCI",
+                      "BC",
                       style: TextStyle(color: Ccolors.primry, fontSize: 10),
                     ),
                   ),
