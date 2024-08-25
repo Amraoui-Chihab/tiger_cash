@@ -44,7 +44,7 @@ dependencies:
   http: ^1.2.1
   get_storage: ^2.1.1
   device_imei: ^0.0.4+2
-  device_information: ^0.0.4
+  device_information: ^0.0.3
   permission_handler: ^11.3.1
   flutter_smart_dialog: ^4.9.7+7
   clipboard: ^0.1.3
@@ -56,7 +56,7 @@ dependencies:
   gradient_circular_progress_indicator: ^0.0.4
   carousel_slider: ^4.0.0
   auto_scroll_text: ^0.0.7
-  video_player: ^2.9.1
+  video_player: ^2.0.0
   visibility_detector: ^0.4.0+2
   media_kit: ^1.1.10+1
   startapp_sdk: ^0.4.2

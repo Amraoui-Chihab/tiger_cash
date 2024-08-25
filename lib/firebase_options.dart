@@ -27,10 +27,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -44,39 +41,49 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBTjUXiIuKHnKY7D4gGVbm6e9GsIlaPOvI',
-    appId: '1:382803214113:web:452431c12d2dc707de4860',
-    messagingSenderId: '382803214113',
-    projectId: 'chat-room-7c0a4',
-    authDomain: 'chat-room-7c0a4.firebaseapp.com',
-    storageBucket: 'chat-room-7c0a4.appspot.com',
+    apiKey: 'AIzaSyAu3JJLmy_NCrv8fpHKismnfLPmEFkzTvE',
+    appId: '1:537015197086:web:bf0c4c185be1c5e2f10a8f',
+    messagingSenderId: '537015197086',
+    projectId: 'babl-cash',
+    authDomain: 'babl-cash.firebaseapp.com',
+    storageBucket: 'babl-cash.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDrxIfaMCXqgDbKJASmr0y7UbAUPdztX2U',
-    appId: '1:382803214113:android:f57c7a1c48c0d703de4860',
-    messagingSenderId: '382803214113',
-    projectId: 'chat-room-7c0a4',
-    storageBucket: 'chat-room-7c0a4.appspot.com',
+    apiKey: 'AIzaSyC7OGWrZqXka2dHj81JOVm96jGaR-pl7Nk',
+    appId: '1:537015197086:android:43f6ef35a390f5b7f10a8f',
+    messagingSenderId: '537015197086',
+    projectId: 'babl-cash',
+    storageBucket: 'babl-cash.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyB1nhraNb2TmWw-89t9ioodv5B9VYmoyOk',
-    appId: '1:382803214113:ios:35588d2916917921de4860',
-    messagingSenderId: '382803214113',
-    projectId: 'chat-room-7c0a4',
-    storageBucket: 'chat-room-7c0a4.appspot.com',
-    iosClientId: '382803214113-h4ohgk3rk8se96bboh9l9krpqomn7bok.apps.googleusercontent.com',
-    iosBundleId: 'com.example.chatApp',
+    apiKey: 'AIzaSyBhJtR0WbaZWNbsS9y-8qckx2gBjD6FrcQ',
+    appId: '1:537015197086:ios:f428f805e6664ce6f10a8f',
+    messagingSenderId: '537015197086',
+    projectId: 'babl-cash',
+    storageBucket: 'babl-cash.appspot.com',
+    iosClientId: '537015197086-b627pef1ps8j3ulre2pis2p2i2ovfupn.apps.googleusercontent.com',
+    iosBundleId: 'com.example.ggggg',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyB1nhraNb2TmWw-89t9ioodv5B9VYmoyOk',
-    appId: '1:382803214113:ios:35588d2916917921de4860',
-    messagingSenderId: '382803214113',
-    projectId: 'chat-room-7c0a4',
-    storageBucket: 'chat-room-7c0a4.appspot.com',
-    iosClientId: '382803214113-h4ohgk3rk8se96bboh9l9krpqomn7bok.apps.googleusercontent.com',
-    iosBundleId: 'com.example.chatApp',
+    apiKey: 'AIzaSyBhJtR0WbaZWNbsS9y-8qckx2gBjD6FrcQ',
+    appId: '1:537015197086:ios:f428f805e6664ce6f10a8f',
+    messagingSenderId: '537015197086',
+    projectId: 'babl-cash',
+    storageBucket: 'babl-cash.appspot.com',
+    iosClientId: '537015197086-b627pef1ps8j3ulre2pis2p2i2ovfupn.apps.googleusercontent.com',
+    iosBundleId: 'com.example.ggggg',
   );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyAu3JJLmy_NCrv8fpHKismnfLPmEFkzTvE',
+    appId: '1:537015197086:web:06d73d7dcef18d16f10a8f',
+    messagingSenderId: '537015197086',
+    projectId: 'babl-cash',
+    authDomain: 'babl-cash.firebaseapp.com',
+    storageBucket: 'babl-cash.appspot.com',
+  );
+
 }

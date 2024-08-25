@@ -2,6 +2,8 @@ import 'dart:convert';
 
 // import 'package:device_info_plus/device_info_plus.dart';
 // import 'package:ggggg/model/apiconst.dart';
+// import 'package:device_information/device_information.dart';
+import 'package:device_imei/device_imei.dart';
 import 'package:device_information/device_information.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_storage/get_storage.dart';
@@ -16,7 +18,7 @@ import '../error/server_error.dart';
 //   http://192.168.40.1:8000
 
 class ApiData {
-  static const String baseUrl = 'https://tigercashiraq.xyz';
+  static const String baseUrl = 'https://bybloncash.fun/public';
   // static const String baseUrl = 'http://192.168.40.1:8000';
   static Future<http.Response> postToApi(
       String endpoint, Map<String, String> body) async {
@@ -108,6 +110,8 @@ class ApiData {
     try {
       requestPhoneStatePermission();
       var imeiNo = await DeviceInformation.deviceIMEINumber;
+
+      // String imei = await DeviceImei.
       Uri uri = Uri.parse("$baseUrl/api/user/getToken");
       x = await http.post(uri,
           headers: {

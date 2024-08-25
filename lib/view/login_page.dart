@@ -29,7 +29,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 20),
                   MyText(
-                    titel: 'Tiger Cash Iraq',
+                    titel: 'بابل كاش',
                     style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   const SizedBox(height: 20),

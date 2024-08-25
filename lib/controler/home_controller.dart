@@ -25,7 +25,6 @@ class HomeController extends GetxController {
   Future getuserInfo() async {
     try {
       var x = await ApiData.getToApi("api/user/viewMy");
-      print(jsonDecode(x.body)["block"]);
       time.value = jsonDecode(x.body)["rest_time"];
       user.value = User.fromJson(jsonDecode(x.body)["data"]);
       if (jsonDecode(x.body)["block"]["is_blocked"]) {

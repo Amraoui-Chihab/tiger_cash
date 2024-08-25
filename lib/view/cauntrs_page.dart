@@ -24,7 +24,7 @@ class CauntrsPage extends StatelessWidget {
         body: Column(children: [
           ListTile(
             title: MyText(
-                titel: "متجر العدادات Tiger Cash",
+                titel: "متجر العدادات بابل كاش",
                 style: Theme.of(context).textTheme.titleLarge),
             subtitle: MyText(
                 titel: "يمكنك شراء تطويرات العدادات من هنا",
