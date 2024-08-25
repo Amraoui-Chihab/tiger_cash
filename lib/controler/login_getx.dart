@@ -36,6 +36,8 @@ class LoginGetx extends GetxController {
       Get.off(const RootPage());
       // Get.to(() => const RootPage());
     } catch (e) {
+      print("111111111111111111111");
+      print(e.toString());
       if (e is ServerError) {
         if (e.response.statusCode == 324) {
           Get.to(() => const CodeInvid());
