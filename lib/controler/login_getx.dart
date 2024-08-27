@@ -24,9 +24,9 @@ class LoginGetx extends GetxController {
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
       final GoogleSignInAuthentication? googleAuth =
           await googleUser?.authentication;
-      // print(googleAuth!.accessToken.toString());
+      print(googleAuth!.accessToken.toString());
       if (kDebugMode) {
-        print(googleAuth!.accessToken.toString());
+        print(googleAuth.accessToken.toString());
       }
       x = await ApiData.loginToMyApi(googleAuth!.accessToken.toString(), code);
       Get.snackbar('تم تسجيل الدخول بنجاح ', "code",
@@ -47,6 +47,8 @@ class LoginGetx extends GetxController {
           Get.snackbar('Error', jsonDecode(e.response.body)["message"]);
         }
       } else {
+        print("1111111111111111111111");
+        print(e.toString());
         Get.snackbar('Error', "حدثت مشكلة في تسجيل الدخول");
       }
     }
