@@ -32,7 +32,8 @@ class LoginGetx extends GetxController {
       Get.snackbar('تم تسجيل الدخول بنجاح ', "code",
           backgroundColor: Colors.green);
       User user = User.fromJson(jsonDecode(x.body)["data"]);
-      await box.write("token", user.apiToken);
+      print(x.body);
+      await box.write("token", jsonDecode(x.body)["api_token"].toString());
       Get.off(const RootPage());
       // Get.to(() => const RootPage());
     } catch (e) {

@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "537015197086",
-    "project_id": "babl-cash",
-    "storage_bucket": "babl-cash.appspot.com"
+    "project_number": "1086607199439",
+    "project_id": "bablchet",
+    "storage_bucket": "bablchet.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:537015197086:android:43f6ef35a390f5b7f10a8f",
+        "mobilesdk_app_id": "1:1086607199439:android:d0e76545994f074b75bbba",
         "android_client_info": {
-          "package_name": "com.example.ggggg"
+          "package_name": "com.example.bablapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "537015197086-3afvggqjfe7bq1ouhds7shv938egt3il.apps.googleusercontent.com",
+          "client_id": "1086607199439-so97k7pbq6et1ml5lps8eau9tcq3cgqh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bablapp",
+            "certificate_hash": "7829cd44a14653184a4853b33e7f0146ab7c34f3"
+          }
+        },
+        {
+          "client_id": "1086607199439-rh7t7ad3u80m7rj56qn9ni2uk4kd33nt.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC7OGWrZqXka2dHj81JOVm96jGaR-pl7Nk"
+          "current_key": "AIzaSyAul5W2X9L8C620XjF3KAvQ0nZgOqByDoE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "537015197086-3afvggqjfe7bq1ouhds7shv938egt3il.apps.googleusercontent.com",
+              "client_id": "1086607199439-rh7t7ad3u80m7rj56qn9ni2uk4kd33nt.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

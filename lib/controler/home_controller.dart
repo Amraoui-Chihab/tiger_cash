@@ -14,6 +14,7 @@ class HomeController extends GetxController {
   RxBool istimeon = false.obs;
   RxString news = "".obs;
   RxString dvsdr = "1".obs;
+  final chatController = Get.put(SheckTime());
 
   @override
   void onInit() {

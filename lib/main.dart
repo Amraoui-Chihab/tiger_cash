@@ -15,8 +15,8 @@ Widget defaultHome = const RootPage();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+      // options: DefaultFirebaseOptions.currentPlatform,
+      );
   await GetStorage.init();
   GetStorage box = GetStorage();
   box.read("token");
