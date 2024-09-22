@@ -81,7 +81,7 @@ class _VideoCapturePageState extends State<VideoCapturePage> {
       request.fields.addAll({
         "title": trxtcontroller.text.toString(),
       });
-
+        
       request.files.add(multipartFile);
       var x = await request.send();
       switch (x.statusCode) {

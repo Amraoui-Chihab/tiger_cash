@@ -34,14 +34,14 @@ class AgentsPage extends StatelessWidget {
                 children: [
                   ListTile(
                     title: MyText(
-                      titel: "وكلاء بابل كاش",
+                      titel: "وكلاء BABYLON ",
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                     subtitle: MyText(
                       titel: "جميع الوكلاء ومعلوماتهم هنا",
                       style: Theme.of(context).textTheme.bodyMedium,
                     ),
-                    trailing: Image.asset("assets/logo.png"),
+                    trailing: Image.asset("assets/icons/logo.jpg"),
                   ),
                   Expanded(
                     child: GetBuilder<AgentController>(

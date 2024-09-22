@@ -33,7 +33,7 @@ Container commentSection(
           ],
         ),
         Expanded(
-          child: GetBuilder<VideoController1>(builder: (context) {
+          child: GetBuilder<VideoController1>(builder: (c) {
             return FutureBuilder(
               future: controller
                   .getComment(controller.videoInfo[index].id.toString()),
@@ -49,20 +49,21 @@ Container commentSection(
                         leading: CircleAvatar(
                           backgroundColor: Colors.grey,
                           backgroundImage: NetworkImage(
-                              snapshot.data![index].user.photoUrl.toString()),
+                              snapshot.data![index].photoUrl.toString()),
                         ),
-                        title: Text(snapshot.data![index].user.name.toString()),
+                        title: Text(snapshot.data![index].name.toString()),
                         subtitle:
                             Text(snapshot.data![index].content.toString()),
                         onTap: () {
-                          if (snapshot.data![index].user.id.toString() !=
+                          if (snapshot.data![index].idu.toString() !=
                               homeController.user.value.id.toString()) {
                             SmartDialog.show(
                                 alignment: Alignment.center,
                                 builder: (cons) {
                                   return GifiWidget(
-                                    userId: controller.comments[index].user.id
+                                    userId: controller.comments[index].idu
                                         .toString(),
+                                    reel_id: c.videoInfo[index].id.toString(),
                                   );
                                 });
                           }
@@ -73,37 +74,7 @@ Container commentSection(
             );
           }),
         ),
-        Row(
-          children: [
-            Expanded(
-              child: TextField(
-                controller: controller.contentText.value,
-                decoration: const InputDecoration(
-                  hintText: 'اكتب تعليقك...',
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
-                ),
-              ),
-            ),
-            IconButton(
-              onPressed: () async {
-                try {
-                  await controller.addComment(
-                      controller.videoInfo[index].id.toString(),
-                      controller.contentText.value.text.toString());
-                  controller.contentText.value.clear();
-                  Get.back();
-                  // controller.videoInfo[index].comment++;
-                  controller.update();
-                } catch (e) {
-                  Get.snackbar("خطأ", e.toString());
-                }
-              },
-              icon: const Icon(Icons.send),
-            ),
-          ],
-        ),
+        
       ],
     ),
   );

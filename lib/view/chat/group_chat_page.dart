@@ -6,7 +6,10 @@ import 'package:get/get.dart';
 import 'package:startapp_sdk/startapp.dart';
 import 'package:tigercashiraq/Api%20Server/apidata.dart';
 import 'package:tigercashiraq/controler/home_controller.dart';
+import 'package:tigercashiraq/live_page.dart';
 import 'chat_screen.dart';
+import 'package:tigercashiraq/view/chat/chat_room.dart';
+import 'package:tigercashiraq/view/chat/loan.dart';
 
 class GroupChatPage extends StatefulWidget {
   const GroupChatPage({super.key});
@@ -37,17 +40,10 @@ class _GroupChatPageState extends State<GroupChatPage> {
         children: [
           Card(
             child: ListTile(
-              leading: const Icon(Icons.chat),
-              title: const Text('كروب الدردشة العام'),
-              subtitle: const Text('يرجى الالتزام بالقواعد العامة'),
-              onTap: () {
-                Get.to(() => ChatScreen());
-              },
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: const Icon(Icons.auto_awesome),
+              leading: Image.asset(
+                "assets/ads.png",
+                height: 35,
+              ),
               title: const Text('الاعلانات اليومية'),
               subtitle: const Text('شاهد الاعلانات لربح نقاط اضافية'),
               onTap: () async {
@@ -70,6 +66,32 @@ class _GroupChatPageState extends State<GroupChatPage> {
               },
             ),
           ),
+          Card(
+            child: ListTile(
+              leading: Image.asset(
+                "assets/chat_room.png",
+                height: 35,
+              ),
+              title: const Text('غرف صوتية'),
+              subtitle: const Text('قم الان بانشاء غرفتك الصوتية'),
+              onTap: () async {
+                Get.to(live_page());
+              },
+            ),
+          ),
+          Card(
+            child: ListTile(
+              leading: Image.asset(
+                "assets/loan.png",
+                height: 35,
+              ),
+              title: const Text('نظام القروض'),
+              subtitle: const Text('قم الان بانشاء قرضك'),
+              onTap: () async {
+                Get.to(loan());
+              },
+            ),
+          )
         ],
       ),
     );
@@ -107,6 +129,8 @@ class _GroupChatPageState extends State<GroupChatPage> {
         },
       );
     } catch (e) {
+      print(e);
+      print('fdsbshdfds');
       Get.snackbar("خطا", "حصلت مشكلة في تحميل الاعلان",
           backgroundColor: Colors.red);
       rethrow;

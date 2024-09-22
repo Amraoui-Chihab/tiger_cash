@@ -19,7 +19,9 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 2.1.1+1
 
 environment:
-  sdk: '>=3.4.0 <4.0.0'
+  sdk: '>=3.3.1 <4.0.0'
+
+
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -34,12 +36,13 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
+  zego_uikit_prebuilt_live_audio_room: ^2.0.1
   cupertino_icons: ^1.0.6
   firebase_core: ^2.32.0
   firebase_auth: ^4.20.0
   get: ^4.6.6
   modal_progress_hud_nsn: ^0.5.1
-  flutter_facebook_auth: ^7.0.0
+  
   google_sign_in: ^6.2.1
   http: ^1.2.1
   get_storage: ^2.1.1
@@ -50,21 +53,31 @@ dependencies:
   clipboard: ^0.1.3
   cloud_firestore: ^4.17.5
   cached_network_image: ^3.3.1
-  flutter_launcher_icons: ^0.13.1
+
   launcher_name: ^1.0.2
   image_picker: ^1.1.2
+  google_nav_bar: ^5.0.6
   gradient_circular_progress_indicator: ^0.0.4
-  carousel_slider: ^4.0.0
+  sliding_clipped_nav_bar: ^3.1.1
+  salomon_bottom_bar: ^3.3.2
+
   auto_scroll_text: ^0.0.7
-  video_player: ^2.0.0
+  video_player: ^2.9.1
   visibility_detector: ^0.4.0+2
   media_kit: ^1.1.10+1
   startapp_sdk: ^0.4.2
   google_fonts: ^6.2.1
+  carousel_slider: ^5.0.0
+  motion_tab_bar: ^2.0.4
+  flutter_launcher_icons: ^0.13.1
+  
+
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -93,13 +106,41 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - assets/
+    - assets/bc.png
+    - assets/money.png
+    - assets/bell.png
+    - assets/support.png
+    - assets/logo.png
+    - assets/store.png
+    - assets/news.png
+    - assets/home.png
+    - assets/profile.png
+    - assets/store2.png
+    - assets/transaction.png
+    - assets/reel.png
+    - assets/entertainment.png
+    - assets/share.png
+    - assets/invitation.png
+    - assets/team.png
+    - assets/logout.png
+    - assets/ads.png
+    - assets/trash.png
+    - assets/add.png
+    - assets/chat.png
+    - assets/gift.png
+    - assets/like.png
+    - assets/no_like.png
+    - assets/icons/logo.jpg
+    - assets/splash_video.mp4
+    - assets/chat_room.png
+    - assets/loan.png
+    
 
 
 flutter_launcher_icons:
   android: true
   ios: true
-  image_path: "assets/logo.png"
+  image_path: "assets/icons/logo.jpg"
 
 
 launcher_name:

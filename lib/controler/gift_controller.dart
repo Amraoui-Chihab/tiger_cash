@@ -19,13 +19,11 @@ class GiftController extends GetxController {
     }
   }
 
-  Future sendgift(String giftId, String userId) async {
+  Future sendgift(String giftId, String userId, String reel_id) async {
     try {
       SmartDialog.showLoading();
-      var response = await ApiData.postToApiCauntrs("api/gift/buy", {
-        "gift_id": giftId,
-        "user_id": userId,
-      });
+      var response = await ApiData.postToApiCauntrs("api/gift/buy",
+          {"gift_id": giftId, "user_id": userId, "reel_id": reel_id});
       // controller.user.value.balance=int.parse(controller.user.value.balance)-int.parse(source)
 
       // Get.snackbar("نجاح", "تم ارسال الهدية بنجاح");

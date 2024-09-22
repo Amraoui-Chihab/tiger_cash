@@ -29,118 +29,123 @@ class CauntrsPage extends StatelessWidget {
             subtitle: MyText(
                 titel: "يمكنك شراء تطويرات العدادات من هنا",
                 style: Theme.of(context).textTheme.bodyMedium),
-            trailing: Image.asset("assets/logo.png"),
+            trailing: Image.asset("assets/icons/logo.jpg"),
           ),
           Expanded(
             child: GetBuilder<CounterController>(
-              init: CounterController(),
-              initState: (_) {},
-              builder: (h) {
-                return FutureBuilder(
-                    future: _.getdataForomApi(),
-                    builder: (context, snabshot) {
-                      if (snabshot.hasError) {
-                        return const Center(
-                            child: Text('حدث خطا في جلب العدادات'));
-                      }
-                      if (snabshot.hasData) {
-                        return ListView.builder(
-                            itemCount: snabshot.data!.length,
-                            itemBuilder: (context, index) {
-                              return Container(
-                                padding: const EdgeInsets.all(5),
-                                margin: const EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.grey),
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(15)),
-                                ),
-                                child: ListTile(
-                                  title: Text(
-                                    snabshot.data![index].name,
-                                    style:
-                                        Theme.of(context).textTheme.titleMedium,
-                                  ),
-                                  subtitle: Text(
-                                    "النقاط اليومية : ${snabshot.data![index].points}",
-                                    style:
-                                        Theme.of(context).textTheme.bodyMedium,
-                                  ),
-                                  trailing: Text(
-                                    "السعر : ${snabshot.data![index].price}",
-                                    style:
-                                        Theme.of(context).textTheme.labelLarge,
-                                  ),
-                                  onTap: () {
-                                    // here i want to show the  dialog
-                                    // showDialog(
-                                    //     context: context,
-                                    //     builder: (context) {});
-                                    Get.defaultDialog(
-                                        title: "تأكيد الشراء",
-                                        content: Text(
-                                          "هل أنت متأكد من شراء ${snabshot.data![index].name}",
-                                        ),
-                                        actions: [
-                                          ElevatedButton(
-                                            onPressed: () async {
-                                              // here i want to call the function
-                                              try {
-                                                var x = await _.buyItem(
-                                                    snabshot.data![index].id);
+  init: CounterController(),
+  initState: (_) {},
+  builder: (controller) {
+    return FutureBuilder(
+      future: controller.getdataForomApi(),
+      builder: (context, snapshot) {
+        // Check for errors
+        if (snapshot.hasError) {
+          return const Center(
+            child: Text('حدث خطأ في جلب العدادات'),
+          );
+        }
 
-                                                if (x.statusCode == 200) {
-                                                  Get.snackbar("مبروك",
-                                                      "تم شراء العداد بنجاح",
-                                                      borderColor:
-                                                          Colors.green);
-                                                  String? counterAmount =
-                                                      Get.find<HomeController>()
-                                                          .user
-                                                          .value
-                                                          .counterAmount;
+        // Check if data is available
+        if (snapshot.hasData) {
+          final data = snapshot.data;
 
-                                                  Get.find<HomeController>()
-                                                          .user
-                                                          .value
-                                                          .counterAmount =
-                                                      (int.parse(counterAmount!) +
-                                                              int.parse(snabshot
-                                                                  .data![index]
-                                                                  .points))
-                                                          .toString();
-                                                } else {
-                                                  Get.snackbar(
-                                                      "خطأ",
-                                                      jsonDecode(
-                                                          x.body)["message"],
-                                                      borderColor: Colors.red);
-                                                }
-                                              } catch (e) {
-                                                Get.snackbar(
-                                                    "خطا", e.toString(),
-                                                    borderColor: Colors.red);
-                                              }
-                                              Get.back();
-                                            },
-                                            child: const Text("تاكيد الشراء"),
-                                          ),
-                                          ElevatedButton(
-                                            onPressed: () {
-                                              Get.back();
-                                            },
-                                            child: const Text("الغاء"),
-                                          ),
-                                        ]);
-                                  },
-                                ),
-                              );
-                            });
-                      }
-                      return const Center(child: CircularProgressIndicator());
-                    });
+          if (data != null && data.isNotEmpty) {
+            // Display ListView if data is not empty
+            return ListView.builder(
+              itemCount: data.length,
+              itemBuilder: (context, index) {
+                final item = data[index];
+                return Container(
+                  padding: const EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                    borderRadius: const BorderRadius.all(Radius.circular(15)),
+                  ),
+                  child: ListTile(
+                    title: Text(
+                      item.name,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    subtitle: Text(
+                      "النقاط اليومية : ${item.points}",
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    trailing: Text(
+                      "السعر : ${item.price}",
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
+                    onTap: () {
+                      // Show confirmation dialog
+                      Get.defaultDialog(
+                        title: "تأكيد الشراء",
+                        content: Text(
+                          "هل أنت متأكد من شراء ${item.name}؟",
+                        ),
+                        actions: [
+                          ElevatedButton(
+                            onPressed: () async {
+                              try {
+                                var response = await controller.buyItem(item.id);
+
+                                if (response.statusCode == 200) {
+                                  Get.snackbar(
+                                    "مبروك",
+                                    "تم شراء العداد بنجاح",
+                                    borderColor: Colors.green,
+                                  );
+                                  String? counterAmount = Get.find<HomeController>().user.value.counterAmount;
+                                  Get.find<HomeController>().user.value.counterAmount =
+                                      (int.parse(counterAmount!) ).toString();
+                                } else {
+                                  Get.snackbar(
+                                    "خطأ",
+                                    jsonDecode(response.body)["message"],
+                                    borderColor: Colors.red,
+                                  );
+                                }
+                              } catch (e) {
+                                Get.snackbar(
+                                  "خطأ",
+                                  e.toString(),
+                                  borderColor: Colors.red,
+                                );
+                              }
+                              Get.back();
+                            },
+                            child: const Text("تأكيد الشراء"),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              Get.back();
+                            },
+                            child: const Text("إلغاء"),
+                          ),
+                        ],
+                      );
+                    },
+                  ),
+                );
               },
-            ),
+            );
+          } else {
+            // Display message when no counters are available
+            return const Center(
+              child: Text('لا يوجد عدادات'),
+            );
+          }
+        }
+
+        // Display loading indicator when data is not yet available
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+    );
+  },
+)
+,
           )
         ]));
   }

@@ -7,6 +7,7 @@ class Reel {
   String userId;
   bool isLiked;
 
+  
   Reel({
     required this.id,
     required this.name,
@@ -16,7 +17,7 @@ class Reel {
     required this.userId,
     required this.isLiked,
   });
-
+  
   factory Reel.fromJson(Map<String, dynamic> json) {
     return Reel(
       name: json['title'].toString(),

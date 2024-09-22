@@ -8,9 +8,12 @@ class GifiWidget extends StatelessWidget {
   GifiWidget({
     super.key,
     required this.userId,
+    required this.reel_id,
   });
 
   final String userId;
+  final String reel_id;
+
   final HomeController homeController = Get.find();
 
   @override
@@ -73,18 +76,23 @@ class GifiWidget extends StatelessWidget {
                                 scrollDirection: Axis.horizontal,
                                 itemCount: snapshot.data!.length,
                                 itemBuilder: (context, index) {
-                                  return Padding(
+                                  return Container(
+                                    height: 90,
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 5),
-                                    child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          GestureDetector(
+                                    child: FittedBox(
+                                        child: Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                          Container(
+                                              child: FittedBox(
+                                                  child: GestureDetector(
                                             onTapDown: (details) async {
                                               await controller.sendgift(
                                                   snapshot.data![index].id
                                                       .toString(),
-                                                  userId);
+                                                  userId,
+                                                  reel_id);
                                               homeController.user.value
                                                   .balance = (int.parse(
                                                           homeController.user
@@ -108,21 +116,22 @@ class GifiWidget extends StatelessWidget {
                                                     fit: BoxFit.cover),
                                               ),
                                             ),
-                                          ),
+                                          ))),
                                           const SizedBox(
                                             height: 5,
                                           ),
                                           Text(snapshot.data![index].name
                                               .toString()),
                                           Text(snapshot.data![index].cost
-                                              .toString()),
+                                                  .toString() +
+                                              " نقطة"),
                                           // TextButton.icon(
                                           //   onPressed: () async {
 
                                           //   },
                                           //   label:
                                           // ),
-                                        ]),
+                                        ])),
                                   );
                                 });
                           });

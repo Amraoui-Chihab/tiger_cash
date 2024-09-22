@@ -6,6 +6,9 @@ class Product {
   final String? type;
   final String? id;
   final String? quntity;
+    final String? month;
+
+
 
   Product({
     this.name,
@@ -15,6 +18,7 @@ class Product {
     this.type,
     this.id,
     this.quntity,
+    this.month
   });
 
   factory Product.fromJson(Map<String, dynamic> json) {
@@ -26,6 +30,7 @@ class Product {
       type: json['type'].toString(),
       id: json['id'].toString(),
       quntity: json['quntity'].toString(),
+      month: json['month'].toString(),
     );
   }
 

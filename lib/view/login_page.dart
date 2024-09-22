@@ -21,12 +21,10 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Expanded(
-                    child: Image.asset(
-                      'assets/logo.png',
-                      // height: 50
-                    ),
-                  ),
+                  CircleAvatar(
+  backgroundImage: AssetImage('assets/icons/logo.jpg'),
+  radius: 50, // Adjust the radius as needed
+), 
                   const SizedBox(height: 20),
                   MyText(
                     titel: 'بابل كاش',
@@ -52,6 +50,7 @@ class LoginPage extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: MyButton(
+                        icon: Icon(Icons.add),
                         label: MyText(
                           titel: "تسجيل الدخول بواسطة google",
                           style: Theme.of(context).textTheme.labelLarge,

@@ -1,14 +1,27 @@
 buildscript {
-    ext.kotlin_version = '1.9.0'
+    ext.kotlin_version = '2.0.20'
+  
+
+
     repositories {
         google()
         mavenCentral()
+         maven { url 'https://storage.zego.im/maven' }   // <- Add this line.
+        maven { url "https://jitpack.io" } 
     }
 
     dependencies {
+        // START: FlutterFire Configuration
+        classpath 'com.google.gms:google-services:4.3.15'
+        // END: FlutterFire Configuration
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:4.1.0'
+        
+    
     }
 }
+
+
 allprojects {
     repositories {
         google()
@@ -18,11 +31,26 @@ allprojects {
 
 rootProject.buildDir = "../build"
 subprojects {
+    afterEvaluate { project ->
+    if (project.plugins.hasPlugin("com.android.application") ||
+      project.plugins.hasPlugin("com.android.library")) {
+      project.android {
+        compileSdkVersion 34
+        buildToolsVersion "34.0.0"
+      }
+    }
+    if (project.hasProperty("android")) {
+      project.android {
+        if (namespace == null) {
+          namespace project.group
+        }
+      }
+    }
+  }
     project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
     project.evaluationDependsOn(":app")
 }
+
 
 tasks.register("clean", Delete) {
     delete rootProject.buildDir

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_common/get_reset.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:tigercashiraq/view/profile/profile_page.dart';
 import 'package:tigercashiraq/view/videos/videos_veiw.dart';
@@ -46,33 +49,34 @@ class _RootPageState extends State<RootPage> {
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Ccolors.primry,
         unselectedItemColor: Colors.grey.shade900,
-        showUnselectedLabels: true,
+        showUnselectedLabels: false,
         showSelectedLabels: true,
         currentIndex: _currentIndex,
         onTap: _onTap,
-        items: const [
+        items:  [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Image.asset("assets/home.png",height: 35,),
             label: 'الرئيسية',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
+            icon: Image.asset("assets/entertainment.png",height: 40,),
             label: 'الترفيه',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.video_collection_outlined),
+            icon: Image.asset("assets/reel.png",height: 40,),
             label: 'ريلز',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.store),
+            icon: Image.asset("assets/store2.png",height: 40,),
             label: 'ستور',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.swap_horiz),
+            icon: Image.asset("assets/transaction.png",height: 40,),
             label: 'الحوالات',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+
+            icon: Image.asset("assets/profile.png",height: 40,),
             label: 'حسابي',
           ),
         ],

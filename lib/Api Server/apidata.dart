@@ -54,7 +54,7 @@ class ApiData {
     GetStorage box = GetStorage();
     // User user = User.fromJson(box.read("user"));
     String tokrn = box.read("token");
-
+    
     try {
       Uri uri = Uri.parse("$baseUrl/$endpoint");
       x = await http.get(uri, headers: {
@@ -106,13 +106,16 @@ class ApiData {
   }
 
   static Future<http.Response> loginToMyApi(String endpoint, var code) async {
-    http.Response x;
+    http.Response x;  
     try {
       requestPhoneStatePermission();
       var imeiNo = await DeviceInformation.deviceIMEINumber;
 
       // String imei = await DeviceImei.
+     // https://bybloncash.fun/public/api/user/getToken
       Uri uri = Uri.parse("$baseUrl/api/user/getToken");
+     print(code);
+     print('chihab');
       x = await http.post(uri,
           headers: {
             'Accept': 'application/json',
@@ -128,14 +131,21 @@ class ApiData {
                   "code_invite": code,
                   "access_token": endpoint,
                   "device_id": imeiNo,
+                 
+                   
                 }));
+                
     } catch (e) {
+      print('rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr');
+      print(e.toString());
       throw Exception(e.toString());
     }
+    print(x.statusCode);
     switch (x.statusCode) {
       case 200:
         return x;
       case 422:
+      throw ServerError(x);
       case 324:
         throw ServerError(x);
       default:
@@ -144,7 +154,7 @@ class ApiData {
   }
 
   static Future<http.Response> postToApiCauntrs(
-      String endpoint, Map<String, String> body) async {
+      String endpoint, Map<String, dynamic> body) async {
     http.Response x;
     GetStorage box = GetStorage();
     // User user = User.fromJson(box.read("user"));

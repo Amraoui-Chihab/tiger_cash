@@ -32,7 +32,7 @@ Widget buildMessageInput(ChatController chatController) {
         ),
         IconButton.filled(
           style: ButtonStyle(
-            backgroundColor: WidgetStateProperty.all(Ccolors.secndry),
+            backgroundColor: MaterialStateProperty.all(Ccolors.secndry),
           ),
           color: Ccolors.primry,
           icon: const Icon(

@@ -26,7 +26,7 @@ class CardPositioned extends StatelessWidget {
         children: [
           TextButton(
               style: const ButtonStyle(
-                  shadowColor: WidgetStatePropertyAll(Colors.black54)),
+                  shadowColor: MaterialStatePropertyAll(Colors.green)),
               onPressed: onPressed,
               child: Column(
                 children: [

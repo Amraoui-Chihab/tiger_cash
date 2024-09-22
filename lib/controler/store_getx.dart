@@ -9,13 +9,13 @@ import 'package:tigercashiraq/model/user.dart';
 
 class StoreController extends GetxController {
   var categories =
-      ["الملابس و الاكسسوارات", "الاجهزة الكهربائية", "منتجات اخرى"].obs;
+      ["ملابس و اكسسوارات", "اجهزة كهربائية", "منتجات اخرى"].obs;
   var selectedCategory = 0.obs;
   var selectedTipy = "clothes".obs;
   var products = <dynamic>[].obs;
   var isLoading = true.obs;
   final Rx<User> user = User().obs;
-
+  
   @override
   void onInit() {
     super.onInit();

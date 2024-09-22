@@ -21,6 +21,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    controller.getdata();
     return Scaffold(
       appBar: myAppBar(context, "بابل كاش "),
       body: Padding(
@@ -28,101 +29,155 @@ class MyHomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const SizedBox(
-              height: 40,
-            ),
-            SizedBox(
-              child: Obx(() => Center(
-                    child: GradientCircularProgressIndicator(
-                      size: MediaQuery.of(context).size.width / 2,
-                      progress: 1 - (controller.time.value / 86400),
-                      gradient: const LinearGradient(
-                        colors: [Ccolors.secndry, Ccolors.primry],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
-                      backgroundColor: Colors.grey.shade200,
-                      child: Center(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            MyText(
-                              titel: "النقاط",
-                              style: Theme.of(context).textTheme.titleLarge,
-                            ),
-                            MyText(
-                              titel: controller.user.value.counterAmount ?? "0",
-                              style: Theme.of(context).textTheme.titleLarge,
-                            ),
-                            MyText(
-                                titel:
-                                    "يتوقف في : ${controller.time.value ~/ 3600}:${(controller.time.value ~/ 60) % 60}:${controller.time.value % 60}",
-                                style: Theme.of(context).textTheme.titleSmall),
-                          ],
-                        ),
-                      ),
-                    ),
-                  )),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
             Center(
               child: Column(
                 children: [
-                  GetBuilder<SheckTime>(
-                      init: SheckTime(),
-                      builder: (vvv) {
-                        vvv.setboot(controller.time.value);
-                        return ElevatedButton(
+                  Row(
+
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top: 15),
+                        width: MediaQuery.of(context).size.width/2.5,
+                        child: GetBuilder<SheckTime>(
+                            init: SheckTime(),
+                            builder: (vvv) {
+                              vvv.setboot(controller.time.value);
+                              return ElevatedButton(
+                                  style: ButtonStyle(
+                                      backgroundColor: MaterialStateProperty.all(
+                                          vvv.x
+                                              ? Colors.greenAccent.shade700
+                                              : Color(0xFFF6EACB))),
+                                  onPressed: vvv.x
+                                      ? () async {
+                                          try {
+                                            SmartDialog.showLoading();
+                                            await controller.active();
+                                            SmartDialog.dismiss();
+                                            Get.snackbar(
+                                                "تهانيئا", "تم التفعيل بنجاح",
+                                                overlayColor: Colors.green);
+                                            vvv.x = false;
+                                            vvv.update();
+                                          } catch (e) {
+                                            print(e);
+                                            SmartDialog.dismiss();
+                                            Get.snackbar(
+                                                "خطا", "حدث خطا غير متوقع",
+                                                overlayColor: Colors.red);
+                                          }
+                                        }
+                                      : null,
+                                  child: Text(
+                                    vvv.x ? "سحب النقاط" : "تم التفعيل",
+                                    style: TextStyle(
+                                        color: vvv.x
+                                            ? Colors.black
+                                            : Colors.redAccent.shade100),
+                                  ));
+                            }),
+                      ),
+                      Container(
+                          margin: EdgeInsets.only(top: 15),
+                          width: MediaQuery.of(context).size.width / 2.5,
+                          child: TextButton(
                             style: ButtonStyle(
-                                backgroundColor: WidgetStateProperty.all(
-                                    vvv.x ? Ccolors.primry : null)),
-                            onPressed: vvv.x
-                                ? () async {
-                                    try {
-                                      SmartDialog.showLoading();
-                                      await controller.active();
-                                      SmartDialog.dismiss();
-                                      Get.snackbar(
-                                          "تهانيئا", "تم التفعيل بنجاح",
-                                          overlayColor: Colors.green);
-                                      vvv.x = false;
-                                      vvv.update();
-                                    } catch (e) {
-                                      SmartDialog.dismiss();
-                                      Get.snackbar("خطا", "حدث خطا غير متوقع",
-                                          overlayColor: Colors.red);
-                                    }
-                                  }
-                                : null,
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 50),
-                              child: Text(
-                                vvv.x ? "سحب النقاط" : "تم التفعيل",
-                                style: TextStyle(
-                                    color: vvv.x ? Colors.white : null),
+                              shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                  side: BorderSide(
+                                      width: 1,
+                                      color: Colors.grey), // Border style
+                                  borderRadius: BorderRadius.circular(
+                                      100), // Rounded corners
+                                ),
                               ),
-                            ));
-                      }),
-                  SizedBox(
-                    child: MyButton(
-                        label: const Text("مضاعفة العداد"),
-                        icon: const Icon(Icons.assured_workload),
-                        onPressed: () {
-                          Get.to(() => CauntrsPage());
-                        }),
+                              backgroundColor: MaterialStateProperty.all(
+                                  Color(0xFFD1E9F6)), // Background color
+                            ),
+                            onPressed: () {
+                              Get.to(() => CauntrsPage());
+                            },
+                            child: FittedBox(
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Image.asset(
+                                    "assets/store.png",
+                                    height: 30,
+                                  ),
+                                  Text("مضاعفة العداد"),
+                                ],
+                              ),
+                            ),
+                          ))
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                   ),
+                  const SizedBox(
+                    height: 30,
+                  ),
+                  SizedBox(
+                    child: Obx(() => Center(
+                          child: GradientCircularProgressIndicator(
+                            size: MediaQuery.of(context).size.width / 2,
+                            progress: 1 - (controller.time.value / 86400),
+                            gradient: const LinearGradient(
+                              colors: [
+                                Color(0xFFEECAD5),
+                                Colors.red,
+                                Color(0xFFF6EACB)
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
+                            backgroundColor: Colors.grey.shade200,
+                            child: Center(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  MyText(
+                                    titel: "النقاط",
+                                    style:
+                                        Theme.of(context).textTheme.titleLarge,
+                                  ),
+                                  MyText(
+                                    titel:
+                                        controller.user.value.counterAmount ??
+                                            "0",
+                                    style:
+                                        Theme.of(context).textTheme.titleLarge,
+                                  ),
+                                  MyText(
+                                      titel:
+                                          "يتوقف في : ${controller.time.value ~/ 3600}:${(controller.time.value ~/ 60) % 60}:${controller.time.value % 60}",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleSmall)
+                                ],
+                              ),
+                            ),
+                          ),
+                        )),
+                  )
                 ],
               ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20),
-              child: MyText(
-                titel: "اخر الاخبار",
-                style: Theme.of(context).textTheme.titleLarge,
+              child: Row(
+                children: [
+                  MyText(
+                    titel: "اخر الاخبار",
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  Image.asset(
+                    "assets/news.png",
+                    width: 30,
+                    height: 30,
+                  ),
+                ],
               ),
             ),
             SizedBox(
@@ -223,7 +278,7 @@ class MyHomePage extends StatelessWidget {
       backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       title: Container(
         decoration: BoxDecoration(
-          color: Ccolors.secndry,
+          color: Color(0xFFD1E9F6),
           borderRadius: BorderRadius.circular(25),
         ),
         child: Row(
@@ -234,12 +289,17 @@ class MyHomePage extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const CircleAvatar(
-                    radius: 13,
+                  CircleAvatar(
+                    radius: 20,
                     backgroundColor: Colors.white,
-                    child: Text(
-                      "BC",
-                      style: TextStyle(color: Ccolors.primry, fontSize: 10),
+                    child: ClipOval(
+                      child: Image.asset(
+                        'assets/bc.png', // Replace with your image path
+                        fit: BoxFit.cover,
+                        width:
+                            40, // Set width and height to match the CircleAvatar's diameter
+                        height: 40,
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -257,7 +317,7 @@ class MyHomePage extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 3),
               decoration: BoxDecoration(
-                color: Ccolors.primry,
+                color: Color(0xFFF1D3CE),
                 borderRadius: BorderRadius.circular(25),
               ),
               child: Row(
@@ -272,16 +332,23 @@ class MyHomePage extends StatelessWidget {
                               .toStringAsFixed(2))
                           .toString(),
                       style:
-                          const TextStyle(color: Colors.white, fontSize: 13))),
+                          const TextStyle(color: Colors.black, fontSize: 13))),
                   // Icon(Icons.dolr),
                   const SizedBox(
                     width: 5,
                   ),
-                  const CircleAvatar(
-                    radius: 13,
+                  CircleAvatar(
+                    radius: 20,
                     backgroundColor: Colors.white,
-                    child: Text("\$",
-                        style: TextStyle(color: Ccolors.primry, fontSize: 13)),
+                    child: ClipOval(
+                      child: Image.asset(
+                        'assets/money.png', // Replace with your image path
+                        fit: BoxFit.cover,
+                        width:
+                            40, // Set width and height to match the CircleAvatar's diameter
+                        height: 40,
+                      ),
+                    ),
                   )
                 ],
               ),
@@ -296,7 +363,19 @@ class MyHomePage extends StatelessWidget {
                     user: controller.user.value,
                   ));
             },
-            icon: const Icon(Icons.notifications)),
+            icon: CircleAvatar(
+              radius: 13,
+              backgroundColor: Colors.white,
+              child: ClipOval(
+                child: Image.asset(
+                  'assets/bell.png', // Replace with your image path
+                  fit: BoxFit.cover,
+                  width:
+                      40, // Set width and height to match the CircleAvatar's diameter
+                  height: 40,
+                ),
+              ),
+            )),
         IconButton.outlined(
             onPressed: () {
               Navigator.push(
@@ -306,8 +385,21 @@ class MyHomePage extends StatelessWidget {
                 ),
               );
             },
-            icon: const Icon(Icons.support_agent)),
+            icon: CircleAvatar(
+              radius: 13,
+              backgroundColor: Colors.white,
+              child: ClipOval(
+                child: Image.asset(
+                  'assets/support.png', // Replace with your image path
+                  fit: BoxFit.cover,
+                  width:
+                      40, // Set width and height to match the CircleAvatar's diameter
+                  height: 40,
+                ),
+              ),
+            )),
       ],
     );
   }
 }
+

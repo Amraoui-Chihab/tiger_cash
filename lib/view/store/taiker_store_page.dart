@@ -17,7 +17,9 @@ class TaikerStorePage extends StatelessWidget {
     final HomeController homeController = Get.find();
 
     return Scaffold(
+     
       appBar: AppBar(
+        backgroundColor: Color(0xFFD1E9F6),
         title: const Text('بابل ستور'),
         centerTitle: true,
         actions: [
@@ -41,90 +43,91 @@ class TaikerStorePage extends StatelessWidget {
               : const SizedBox(),
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Obx(() => Row(
-                  children:
-                      List.generate(controller.categories.length, (index) {
-                    return Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(right: 5),
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            backgroundColor: WidgetStateProperty.all(
-                              controller.selectedCategory.value == index
-                                  ? Ccolors.secndry
-                                  : Colors.grey.shade300,
-                            ),
-                          ),
-                          onPressed: () {
-                            controller.selectCategory(index);
-                            controller.srtselcetedTipy(index);
-                          },
-                          child: Text(
-                            controller.categories[index],
-                            overflow: TextOverflow.fade,
-                          ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Obx(() => Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: List.generate(controller.categories.length, (index) {
+                  return Container(
+                    margin: EdgeInsets.only(top: 5),
+                    height: MediaQuery.of(context).size.height * 6 / 100,
+                    width: (MediaQuery.of(context).size.width /
+                            controller.categories.length) -
+                        10,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                          controller.selectedCategory.value == index
+                              ? Ccolors.secndry
+                              : Colors.grey.shade300,
                         ),
                       ),
-                    );
-                  }),
-                )),
-            Expanded(
-              child: Obx(() {
-                if (controller.isLoading.value) {
-                  return const Center(child: CircularProgressIndicator());
-                }
-                if (controller.products.isEmpty) {
-                  return const Center(child: Text("لا يوجد منتجات"));
-                } else {
-                  return GridView.builder(
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
+                      onPressed: () {
+                        controller.selectCategory(index);
+                        controller.srtselcetedTipy(index);
+                      },
+                      child: FittedBox(
+                        child: Text(
+                          controller.categories[index],
+                          overflow: TextOverflow.fade,
+                        ),
                       ),
-                      itemCount: controller.products.length,
-                      itemBuilder: (context, index) {
-                        return MaterialButton(
-                          onPressed: () {
-                            Get.to(() => ProductDetailsPage(
-                                  product: controller.products[index],
-                                ));
-                          },
-                          child: GridTile(
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                Expanded(
-                                  child: CachedNetworkImage(
-                                    imageUrl: controller.products[index].image!,
-                                    progressIndicatorBuilder:
-                                        (context, url, downloadProgress) =>
-                                            Center(
-                                      child: SizedBox(
-                                        // width: 70,
-                                        // height: 70,
-                                        child: CircularProgressIndicator(
-                                            value: downloadProgress.progress),
-                                      ),
-                                    ),
-                                    errorWidget: (context, url, error) =>
-                                        const Icon(Icons.error),
-                                  ),
+                    ),
+                  );
+                }),
+              )),
+          Expanded(
+            child: Obx(() {
+              if (controller.isLoading.value) {
+                return const Center(child: CircularProgressIndicator());
+              }
+              if (controller.products.isEmpty) {
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Center(child: Text("لا يوجد منتجات")),
+                    SizedBox(width: 10,),
+                    Image.asset("assets/trash.png",height: 40,)
+
+                  ],
+                );
+              } else {
+                return GridView.builder(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                    ),
+                    itemCount: controller.products.length,
+                    itemBuilder: (context, index) {
+                      return MaterialButton(
+                        onPressed: () {
+                          Get.to(() => ProductDetailsPage(
+                                index: index,
+                              ));
+                        },
+                        child: GridTile(
+                            child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                              Expanded(
+                                child: Image.network(
+                                   controller.products[index].image!,
+                                  
                                 ),
-                                Text(controller.products[index].name!),
-                                Text(controller.products[index].price!),
-                              ])),
-                        );
-                      });
-                }
-              }),
-            )
-          ],
-        ),
+                              ),
+                              Text("الإسم :" +controller.products[index].name!),
+                              Text("الوصف : "+controller.products[index].description!),
+                            int.parse(controller.products[index].month)!=0?  Text("أشهر التقسيط : "+controller.products[index].month!):Text("بدون تقسيط "),
+                              Text("الكمية : "+controller.products[index].quntity!),
+                              Text( "سعر الشراء بالدولار العراقي:"+controller.products[index].price! ,textDirection: TextDirection.rtl,),
+                            ])),
+                      );
+                    });
+              }
+            }),
+          )
+        ],
       ),
     );
   }

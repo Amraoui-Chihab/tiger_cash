@@ -1,1 +1,25 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"babl-cash","appId":"1:537015197086:android:43f6ef35a390f5b7f10a8f","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"babl-cash","configurations":{"android":"1:537015197086:android:43f6ef35a390f5b7f10a8f","ios":"1:537015197086:ios:f428f805e6664ce6f10a8f","macos":"1:537015197086:ios:f428f805e6664ce6f10a8f","web":"1:537015197086:web:bf0c4c185be1c5e2f10a8f","windows":"1:537015197086:web:06d73d7dcef18d16f10a8f"}}}}}}
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "bablecash",
+                    "appId": "1:991291663420:android:2b22c0fcbf705137f30f39",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "bablecash",
+                    "configurations": {
+                        "android": "1:991291663420:android:2b22c0fcbf705137f30f39",
+                        "ios": "1:991291663420:ios:8010b42e7cfc3b46f30f39",
+                        "macos": "1:991291663420:ios:7952a7f8dc00dc18f30f39",
+                        "web": "1:991291663420:web:9a689d0bcd5a5126f30f39",
+                        "windows": "1:991291663420:web:2ca01f193eb328cff30f39"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -91,6 +91,16 @@ class HomeController extends GetxController {
       throw Exception('Failed to load images');
     }
   }
+  Future getdata() async {
+    try {
+      var x = await ApiData.getToApi("api/user/viewMy");
+      var i = jsonDecode(x.body);
+      user.value = User.fromJson(i["data"]) ;
+      update();
+    } catch (e) {
+      rethrow;
+    }
+  }
 
   Future generalInformation() async {
     try {
