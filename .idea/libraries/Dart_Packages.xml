@@ -1,0 +1,1292 @@
+<component name="libraryTable">
+  <library name="Dart Packages" type="DartPackagesLibraryType">
+    <properties>
+      <option name="packageNameToDirsMap">
+        <entry key="_flutterfire_internals">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.3.35/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="archive">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.6.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="args">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.5.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="asn1lib">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/asn1lib-1.5.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="async">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="auto_scroll_text">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/auto_scroll_text-0.0.7/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="boolean_selector">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cached_network_image">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image-3.4.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cached_network_image_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_platform_interface-4.1.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cached_network_image_web">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_web-1.3.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="carousel_slider">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/carousel_slider-5.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="change_app_package_name">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/change_app_package_name-1.3.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="characters">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="checked_yaml">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/checked_yaml-2.0.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cli_util">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cli_util-0.4.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="clipboard">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/clipboard-0.1.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="clock">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cloud_firestore">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore-4.17.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cloud_firestore_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_platform_interface-6.2.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cloud_firestore_web">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_web-3.12.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="collection">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.18.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="convert">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/convert-3.1.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cross_file">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cross_file-0.3.4+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="crypto">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="csslib">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/csslib-1.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="cupertino_icons">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="dbus">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/dbus-0.7.10/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="device_imei">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/device_imei-0.0.4+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="device_information">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/device_information-0.0.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="encrypt">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/encrypt-5.0.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="fake_async">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="ffi">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-2.1.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="file">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="file_picker">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_picker-6.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="file_selector_linux">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_linux-0.9.2+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="file_selector_macos">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_macos-0.9.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="file_selector_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_platform_interface-2.6.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="file_selector_windows">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_windows-0.9.3+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_auth">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-4.20.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_auth_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-7.3.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_auth_web">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.12.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_core">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.32.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_core_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_platform_interface-5.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="firebase_core_web">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_web-2.17.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="fixnum">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/fixnum-1.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../dev/flutter/packages/flutter/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_cache_manager">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_cache_manager-3.4.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_launcher_icons">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_launcher_icons-0.13.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_lints">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-3.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_localizations">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../dev/flutter/packages/flutter_localizations/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_logs">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_logs-2.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_plugin_android_lifecycle">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.19/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_smart_dialog">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_smart_dialog-4.9.8+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_styled_toast">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_styled_toast-2.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_test">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../dev/flutter/packages/flutter_test/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="flutter_web_plugins">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../dev/flutter/packages/flutter_web_plugins/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="get">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/get-4.6.6/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="get_storage">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/get_storage-2.1.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_fonts">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_fonts-6.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_identity_services_web">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_identity_services_web-0.3.1+4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_nav_bar">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_nav_bar-5.0.6/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_sign_in">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in-6.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_sign_in_android">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_android-6.1.23/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_sign_in_ios">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_ios-5.7.7/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_sign_in_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_platform_interface-2.4.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="google_sign_in_web">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_web-0.12.4+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="gradient_circular_progress_indicator">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/gradient_circular_progress_indicator-0.0.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="html">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/html-0.15.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="http">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="http_parser">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image-4.2.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-1.1.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker_android">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.12+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker_for_web">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_for_web-3.0.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker_ios">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.12/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker_linux">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_linux-0.2.1+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker_macos">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_macos-0.2.1+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.10.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker_windows">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_windows-0.2.1+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="intl">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="js">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="json_annotation">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.9.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="launcher_name">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/launcher_name-1.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="leak_tracker">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="leak_tracker_flutter_testing">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="leak_tracker_testing">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="lints">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/lints-3.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="matcher">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="material_color_utilities">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.11.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="media_kit">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/media_kit-1.1.11/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="meta">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.15.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="mime">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/mime-1.0.6/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="modal_progress_hud_nsn">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/modal_progress_hud_nsn-0.5.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="motion_tab_bar">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/motion_tab_bar-2.0.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="native_device_orientation">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/native_device_orientation-1.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="octo_image">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/octo_image-2.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="package_info_plus">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus-8.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="package_info_plus_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus_platform_interface-3.0.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_provider">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider-2.1.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_provider_android">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.2.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_provider_foundation">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.4.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_provider_linux">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_provider_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_platform_interface-2.1.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="path_provider_windows">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_windows-2.3.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="permission_handler">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler-11.3.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="permission_handler_android">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_android-12.0.12/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="permission_handler_apple">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_apple-9.4.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="permission_handler_html">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_html-0.1.3+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="permission_handler_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_platform_interface-4.2.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="permission_handler_windows">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_windows-0.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="petitparser">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/petitparser-6.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="platform">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="plugin_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="pointycastle">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/pointycastle-3.9.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="rxdart">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/rxdart-0.28.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="safe_local_storage">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/safe_local_storage-1.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="salomon_bottom_bar">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/salomon_bottom_bar-3.3.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="sky_engine">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../../../dev/flutter/bin/cache/pkg/sky_engine/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="sliding_clipped_nav_bar">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/sliding_clipped_nav_bar-3.1.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="source_span">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="sprintf">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/sprintf-7.0.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="sqflite">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite-2.3.3+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="sqflite_common">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite_common-2.5.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="stack_trace">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="startapp_sdk">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/startapp_sdk-0.4.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="statemachine">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/statemachine-3.3.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="stream_channel">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="string_scanner">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="synchronized">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/synchronized-3.1.0+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="term_glyph">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="test_api">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="typed_data">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="universal_io">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/universal_io-2.2.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="universal_platform">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/universal_platform-1.1.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="uri_parser">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/uri_parser-2.0.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="uuid">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/uuid-4.5.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="vector_math">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="video_player">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/video_player-2.9.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="video_player_android">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_android-2.4.14/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="video_player_avfoundation">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_avfoundation-2.6.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="video_player_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_platform_interface-6.2.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="video_player_web">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_web-2.3.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="visibility_detector">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/visibility_detector-0.4.0+2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="vm_service">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.5/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="wakelock_plus">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/wakelock_plus-1.2.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="wakelock_plus_platform_interface">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/wakelock_plus_platform_interface-1.2.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="web">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.5.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="win32">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.5.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="xdg_directories">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.0.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="xml">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/xml-6.5.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="yaml">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/yaml-3.1.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="zego_callkit">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_callkit-1.0.0+4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="zego_express_engine">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_express_engine-3.16.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="zego_plugin_adapter">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_plugin_adapter-2.13.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="zego_uikit">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_uikit-2.24.3/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="zego_uikit_prebuilt_live_audio_room">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_uikit_prebuilt_live_audio_room-2.18.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="zego_uikit_signaling_plugin">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_uikit_signaling_plugin-2.8.4/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="zego_zim">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_zim-2.17.1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="zego_zpns">
+          <value>
+            <list>
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_zpns-2.6.0+3/lib" />
+            </list>
+          </value>
+        </entry>
+      </option>
+    </properties>
+    <CLASSES>
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.3.35/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.6.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/args-2.5.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/asn1lib-1.5.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/auto_scroll_text-0.0.7/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image-3.4.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_platform_interface-4.1.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cached_network_image_web-1.3.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/carousel_slider-5.0.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/change_app_package_name-1.3.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/checked_yaml-2.0.3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cli_util-0.4.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/clipboard-0.1.3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore-4.17.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_platform_interface-6.2.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_web-3.12.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.18.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/convert-3.1.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cross_file-0.3.4+2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/crypto-3.0.3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/csslib-1.0.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/dbus-0.7.10/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/device_imei-0.0.4+2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/device_information-0.0.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/encrypt-5.0.3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/ffi-2.1.3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file-7.0.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_picker-6.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_linux-0.9.2+1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_macos-0.9.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_platform_interface-2.6.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/file_selector_windows-0.9.3+2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-4.20.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-7.3.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.12.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.32.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_platform_interface-5.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_web-2.17.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/fixnum-1.1.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_cache_manager-3.4.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_launcher_icons-0.13.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-3.0.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_logs-2.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.19/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_smart_dialog-4.9.8+1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_styled_toast-2.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/get-4.6.6/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/get_storage-2.1.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_fonts-6.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_identity_services_web-0.3.1+4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_nav_bar-5.0.6/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in-6.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_android-6.1.23/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_ios-5.7.7/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_platform_interface-2.4.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/google_sign_in_web-0.12.4+2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/gradient_circular_progress_indicator-0.0.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/html-0.15.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image-4.2.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker-1.1.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_android-0.8.12+1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_for_web-3.0.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_ios-0.8.12/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_linux-0.2.1+1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_macos-0.2.1+1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_platform_interface-2.10.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/image_picker_windows-0.2.1+1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/json_annotation-4.9.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/launcher_name-1.0.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/lints-3.0.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.11.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/media_kit-1.1.11/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.15.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/mime-1.0.6/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/modal_progress_hud_nsn-0.5.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/motion_tab_bar-2.0.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/native_device_orientation-1.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/octo_image-2.1.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus-8.0.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/package_info_plus_platform_interface-3.0.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider-2.1.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_android-2.2.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_foundation-2.4.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_linux-2.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_platform_interface-2.1.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path_provider_windows-2.3.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler-11.3.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_android-12.0.12/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_apple-9.4.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_html-0.1.3+2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_platform_interface-4.2.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/permission_handler_windows-0.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/petitparser-6.0.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/platform-3.1.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/pointycastle-3.9.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/rxdart-0.28.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/safe_local_storage-1.0.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/salomon_bottom_bar-3.3.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/sliding_clipped_nav_bar-3.1.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/sprintf-7.0.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite-2.3.3+1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite_common-2.5.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/startapp_sdk-0.4.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/statemachine-3.3.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/synchronized-3.1.0+1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/universal_io-2.2.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/universal_platform-1.1.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/uri_parser-2.0.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/uuid-4.5.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/video_player-2.9.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_android-2.4.14/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_avfoundation-2.6.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_platform_interface-6.2.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_web-2.3.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/visibility_detector-0.4.0+2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.5/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/wakelock_plus-1.2.8/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/wakelock_plus_platform_interface-1.2.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.5.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.5.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.0.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/xml-6.5.0/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/yaml-3.1.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_callkit-1.0.0+4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_express_engine-3.16.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_plugin_adapter-2.13.2/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_uikit-2.24.3/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_uikit_prebuilt_live_audio_room-2.18.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_uikit_signaling_plugin-2.8.4/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_zim-2.17.1/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/zego_zpns-2.6.0+3/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../dev/flutter/bin/cache/pkg/sky_engine/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../dev/flutter/packages/flutter/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../dev/flutter/packages/flutter_localizations/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../dev/flutter/packages/flutter_test/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../dev/flutter/packages/flutter_web_plugins/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
